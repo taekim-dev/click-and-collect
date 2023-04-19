@@ -1,21 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import CartPage from './pages/CartPage';
-import PaymentPage from './pages/PaymentPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import HomePage from './components/HomePage';
+import CartPage from './components/CartPage';
+import ProductDetailPage from './components/ProductDetailPage';
+import PaymentPage from './components/PaymentPage';
+import './assets/styles/App.css';
 
 function App() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/cart" component={CartPage} />
-        <Route path="/payment" component={PaymentPage} />
-      </Routes>
-      <Footer />
+      <div className="App">
+        <Routes>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/home" component={HomePage} />
+          <Route path="/cart" component={CartPage} />
+          <Route path="/product/:id" component={ProductDetailPage} />
+          <Route path="/payment" component={PaymentPage} />
+        </Routes>
+      </div>
     </Router>
   );
 }
