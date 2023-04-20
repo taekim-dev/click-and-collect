@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
+    overflow-x: hidden;
   }
 
   /* Header */
@@ -235,7 +236,7 @@
   /* Right Pane */
   .home-page .right-pane {
     margin-left: 5%;
-    margin-right: 5%;
+    margin-top: 22px;
     width: 60%;
   }
 
@@ -267,3 +268,50 @@
     background-color: skyblue;
     border-width: 5px;
   }
+
+  .home-page .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .home-page .card {
+    flex: 0 0 calc(33.333% - 1rem);
+    border: 1px solid #333;
+    height: 200px;
+    margin-bottom: 1rem;
+    background-color: white;
+  }
+
+  .home-page .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .home-page .pagination-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .home-page .pagination-page {
+    font-family: monospace;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+  }
+  
+  .home-page .pagination-page.current {
+    font-weight: bold;
+  }
+  
+  

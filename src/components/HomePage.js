@@ -20,10 +20,8 @@ function HomePage() {
           <h2 className="category-title">Category</h2>
           <select className="category-dropdown">
             <option value="all">All</option>
-            {/* Add more options for different categories */}
           </select>
           <h2 className="rating-title">Ratings</h2>
-          {/* Add the rating range slider component */}
           <input
             type="range"
             min="3"
@@ -37,7 +35,6 @@ function HomePage() {
             <span className="rating-label">★5</span>
           </div>
           <h2 className="prices-title">Prices<img src={coinIcon} alt="Coin" className="prices-coin-icon" /></h2>
-          {/* Add the prices range slider component */}
           <div className="prices-range-container">
             <input
               type="number"
@@ -81,8 +78,24 @@ function HomePage() {
             <button className="sort-button lowest">Lowest Price</button>
             <button className="sort-button highest">Highest Price</button>
           </div>
-          {/* Add the product grid component */}
-          {/* Add the pagination component */}
+          <div class="cards-container">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+          <div class="pagination">
+        <button class="pagination-arrow">&lt;</button>
+        <span class="pagination-page current">1</span>
+        <span class="pagination-page">2</span>
+        <span class="pagination-page">3</span>
+        <button class="pagination-arrow">&gt;</button>
+      </div>
         </div>
       </div>
     </div>
