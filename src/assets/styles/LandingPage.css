@@ -7,33 +7,36 @@
     background-color: white;
   }
   
-  .logo {
+  .landing-page .logo {
     width: 20%;
+    min-width: 200px; 
+    margin-bottom: 1rem;
   }
   
-  .username-text {
+  .landing-page .username-text {
     font-size: 50px;
-    font-family: monospace;
+    font-family: monospace, sans-serif;
     font-weight: bold;
     margin: 1rem 0;
   }
   
-  .username-input {
+  .landing-page .username-input {
     font-size: 25px;
     padding: 0.3rem 0.5rem;
     border: 5px solid black;
     border-radius: 5px;
     background-color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     line-height: 40px;
     text-align: center;
   }
   
-  .enter-button {
+  .landing-page .enter-button {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: rgb(255, 255, 255);
     width: 10%;
+    min-width: 120px; 
     font-size: 40px;
     padding: 0.3rem 0.5rem;
     border: 2px solid black;
@@ -46,29 +49,29 @@
     transition: top 0.1s ease, box-shadow 0.1s ease;
   }
   
-  .enter-button:hover {
+  .landing-page .enter-button:hover {
     background-color: rgb(255, 68, 0);
   }
   
-  .enter-button:active {
+  .landing-page .enter-button:active {
     top: 6px;
     box-shadow: none;
   }
   
-  .coin-info {
+  .landing-page .coin-info {
     display: flex;
     align-items: center;
   }
   
-  .coin-icon {
+  .landing-page .coin-icon {
     width: 30px;
     height: 30px;
     margin-right: 0.5rem;
   }
   
-  .coin-text {
+  .landing-page .coin-text {
     font-size: 30px;
     font-family: monospace;
     font-weight: bold;
+    margin-right: 1rem;
   }
-  
