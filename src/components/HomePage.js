@@ -22,7 +22,7 @@ function HomePage() {
             <option value="all">All</option>
             {/* Add more options for different categories */}
           </select>
-          <h2 className="rating-title">Rating</h2>
+          <h2 className="rating-title">Ratings</h2>
           {/* Add the rating range slider component */}
           <input
             type="range"
@@ -36,7 +36,7 @@ function HomePage() {
             <span className="rating-label">★4</span>
             <span className="rating-label">★5</span>
           </div>
-          <h2 className="prices-title">Prices</h2>
+          <h2 className="prices-title">Prices<img src={coinIcon} alt="Coin" className="prices-coin-icon" /></h2>
           {/* Add the prices range slider component */}
           <div className="prices-range-container">
             <input
@@ -78,8 +78,8 @@ function HomePage() {
             <button className="sort-button top-rated active">
               Top Rated
             </button>
-            <button className="sort-button economy">Economy</button>
-            <button className="sort-button luxury">Luxury</button>
+            <button className="sort-button lowest">Lowest Price</button>
+            <button className="sort-button highest">Highest Price</button>
           </div>
           {/* Add the product grid component */}
           {/* Add the pagination component */}
