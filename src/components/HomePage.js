@@ -42,22 +42,22 @@ function HomePage() {
             <input
               type="number"
               min="0"
-              max="100"
+              max="20"
               defaultValue="0"
               className="min-price-input"
             />
             <input
               type="range"
               min="0"
-              max="100"
+              max="20"
               defaultValue="0"
               className="price-range"
             />
             <input
               type="number"
               min="0"
-              max="100"
-              defaultValue="100"
+              max="20"
+              defaultValue="20"
               className="max-price-input"
             />
           </div>

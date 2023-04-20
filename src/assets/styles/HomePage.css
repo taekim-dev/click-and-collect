@@ -17,7 +17,7 @@
   }
   
   .home-page .logo {
-    width: 120px; 
+    width: 120px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -54,13 +54,12 @@
     margin-left: 5%;
     margin-right: 5%;
     width: 20%;
-
   }
   
   .home-page .category-title,
   .home-page .rating-title,
   .home-page .prices-title {
-    font-size: 20px;
+    font-size: 30px;
     font-family: monospace;
     text-align: center;
     margin-bottom: 1rem;
@@ -70,70 +69,50 @@
     width: 100%;
     margin-bottom: 1rem;
     border-radius: 5px;
+    border: 2px solid black;
+    font-size: 20px;
+    height: 40px;
+    text-align-last: center;
+    background-color: rgb(253, 111, 134);
   }
-  
-  .home-page .checkbox-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-  }
-  
-  .home-page .checkbox-label {
-    font-family: monospace;
-    margin-bottom: 0.5rem;
-    
-  }
-  
-  .home-page .discount-checkbox,
-  .home-page .in-stock-checkbox {
-    height: 20px;
-    width: 20px;
-    margin-right: 0.5rem;
-    
-  }
-  
-  .home-page .panes-container {
-    width: 100%;
-    display: flex;
-  }  
-  
-  .home-page .right-pane {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 60%;
-  }
-  
-  .home-page .sorting-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  .home-page .sorted-by-text {
-    font-family: monospace;
-    margin-right: 1rem;
-  }
-  
-  .home-page .sort-button {
-    font-family: sans-serif;
-    font-weight: bold;
-    border: 2px solid #000;
-    border-radius: 5px;
-    margin-right: 1rem;
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .home-page .sort-button.active {
-    background-color: skyblue;
-  }
-  
-  /* ... (existing CSS) ... */
 
-.home-page .rating-range {
+  .home-page .category-dropdown option {
+    text-align: center;
+  }
+  
+  .home-page .rating-range {
     width: 100%;
     margin-bottom: 0.5rem;
+    -webkit-appearance: none;
+    height: 10px;
+    background-color: black;
+  }
+  
+  .home-page .rating-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .home-page .rating-range::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .home-page .rating-range[value="3"]::-webkit-slider-thumb {
+    background-color: rgb(255, 238, 0);
+  }
+  
+  .home-page .rating-range[value="3"]::-moz-range-thumb {
+    background-color: rgb(255, 238, 0);
   }
   
   .home-page .rating-labels {
@@ -144,6 +123,115 @@
   
   .home-page .rating-label {
     font-family: monospace;
+    font-size: 2rem;
   }
   
+  .home-page .prices-range-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
   
+  .home-page .min-price-input,
+  .home-page .max-price-input {
+    width: 20%;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+  }
+  
+  .home-page .prices-range-container {
+    margin-bottom: 1rem;
+}
+
+  .home-page .price-range {
+    width: 60%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    -webkit-appearance: none;
+    height: 10px;
+    background-color: black;
+  }
+
+  .home-page .price-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    background-color: #01c331;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .home-page .price-range::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .home-page .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .home-page .checkbox-label {
+    font-family: monospace;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .home-page .discount-checkbox,
+  .home-page .in-stock-checkbox {
+    height: 20px;
+    width: 20px;
+    margin-right: 0.5rem;
+  }
+
+  .home-page .panes-container {
+    width: 100%;
+    display: flex;
+  }
+
+  .home-page .right-pane {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 60%;
+  }
+
+  .home-page .sorting-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .home-page .sorted-by-text {
+    font-family: monospace;
+    font-size: 20px;
+    margin-right: 1rem;
+  }
+
+  .home-page .sort-button {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-right: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .home-page .sort-button.active {
+    background-color: skyblue;
+    border-width: 10px;
+  }
