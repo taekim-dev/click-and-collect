@@ -50,10 +50,100 @@
     margin-left: 0.1rem;
   }
   
-  /* Add styles for the Left Pane and Right Pane here */
-  .left-pane {
+  .home-page .left-pane {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 20%;
+
   }
   
-  .right-pane {
+  .home-page .category-title,
+  .home-page .rating-title,
+  .home-page .prices-title {
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    margin-bottom: 1rem;
   }
+  
+  .home-page .category-dropdown {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  .home-page .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  .home-page .checkbox-label {
+    font-family: monospace;
+    margin-bottom: 0.5rem;
+    
+  }
+  
+  .home-page .discount-checkbox,
+  .home-page .in-stock-checkbox {
+    height: 20px;
+    width: 20px;
+    margin-right: 0.5rem;
+    
+  }
+  
+  .home-page .panes-container {
+    width: 100%;
+    display: flex;
+  }  
+  
+  .home-page .right-pane {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 60%;
+  }
+  
+  .home-page .sorting-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .home-page .sorted-by-text {
+    font-family: monospace;
+    margin-right: 1rem;
+  }
+  
+  .home-page .sort-button {
+    font-family: sans-serif;
+    font-weight: bold;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-right: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .home-page .sort-button.active {
+    background-color: skyblue;
+  }
+  
+  /* ... (existing CSS) ... */
+
+.home-page .rating-range {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .home-page .rating-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+  }
+  
+  .home-page .rating-label {
+    font-family: monospace;
+  }
+  
   
