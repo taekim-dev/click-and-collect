@@ -57,7 +57,7 @@
   /* Left Pane */
   .home-page .left-pane {
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 3%;
     width: 20%;
   }
   
@@ -262,6 +262,7 @@
     background-color: transparent;
     cursor: pointer;
     outline: none;
+    position: relative;
     margin-bottom: 0.5rem;
     box-shadow: 0px 6px 0 0 rgba(146, 143, 142, 0.3);
     transition: top 0.1s ease, box-shadow 0.1s ease;
@@ -273,7 +274,8 @@
 
   .home-page .sort-button.active {
     background-color: rgb(173, 227, 248);
-    top: 6px;
+    top: 3px;
+    box-shadow: none;
   }
 
   .home-page .cards-container {

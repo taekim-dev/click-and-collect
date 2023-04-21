@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../assets/styles/HomePage.css';
 import logo from '../assets/images/logo.png';
 import cartIcon from '../assets/images/cart-icon.png';
 import coinIcon from '../assets/images/coin-icon.png';
 
 function HomePage() {
+    const [activeButton, setActiveButton] = useState('top-rated');
+    function handleButtonClick(buttonId) {
+        setActiveButton(buttonId);
+      }
   return (
     <div className="home-page">
       <header className="header">
@@ -72,11 +76,25 @@ function HomePage() {
         <div className="right-pane">
           <div className="sorting-container">
             <span className="sorted-by-text">Sorted by</span>
-            <button className="sort-button top-rated active">
-              Top Rated
-            </button>
-            <button className="sort-button lowest">Lowest Price</button>
-            <button className="sort-button highest">Highest Price</button>
+            <button
+  className={`sort-button top-rated${activeButton === 'top-rated' ? ' active' : ''}`}
+  onClick={() => handleButtonClick('top-rated')}
+>
+  Top Rated
+</button>
+<button
+  className={`sort-button lowest${activeButton === 'lowest' ? ' active' : ''}`}
+  onClick={() => handleButtonClick('lowest')}
+>
+  Lowest Price
+</button>
+<button
+  className={`sort-button highest${activeButton === 'highest' ? ' active' : ''}`}
+  onClick={() => handleButtonClick('highest')}
+>
+  Highest Price
+</button>
+
           </div>
           <div class="cards-container">
             <div class="card"></div>
