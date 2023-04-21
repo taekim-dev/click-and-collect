@@ -1,0 +1,47 @@
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .header .logo {
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .header .header-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 55%;
+    margin-right: 10px;
+  }
+  
+  .header .cart-icon {
+    width: 8%;
+    height: 8%;
+    margin-left: 1rem;
+  }
+  
+  .header .coin-icon {
+    width: 7%;
+    height: 7%;
+    margin-left: 0.5rem;
+  }
+  
+  .header .coin-balance {
+    font-size: 2.5rem;
+    font-family: monospace;
+    font-weight: bold;
+    margin-left: 0.1rem;
+  }
+  
