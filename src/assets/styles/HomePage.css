@@ -115,6 +115,7 @@
     height: 28px;
     background-color: white;
     border: 2px solid black;
+    background-color: #01c331;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -323,4 +324,55 @@
     font-weight: bold;
   }
   
+  .home-page .card {
+    position: relative;
+  }
+
+  .home-page .card:hover {
+    outline: 3px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .home-page .card .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
   
+  .home-page .collect-button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    box-shadow: 0px 10px 0 0 rgba(99, 103, 92, 0.3);
+    transition: top 0.1s ease, box-shadow 0.1s ease, opacity 0.3s ease;
+  }
+  
+  .home-page .card:hover .collect-button {
+    opacity: 1;
+  }
+  
+  .home-page .collect-button:hover {
+    background-color: rgb(254, 242, 107);
+  }
+  
+  .home-page .collect-button:active {
+    background-color: rgb(255, 186, 89);
+    box-shadow: none;
+  }
+
+  .home-page .cards-container a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }

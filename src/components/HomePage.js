@@ -3,12 +3,32 @@ import '../assets/styles/HomePage.css';
 import logo from '../assets/images/logo.png';
 import cartIcon from '../assets/images/cart-icon.png';
 import coinIcon from '../assets/images/coin-icon.png';
+import product1 from '../assets/images/product-1.png';
+import product2 from '../assets/images/product-2.png';
+import product3 from '../assets/images/product-3.png';
 
 function HomePage() {
     const [activeButton, setActiveButton] = useState('top-rated');
+    const productImages = [product1, product2, product3];
+    
     function handleButtonClick(buttonId) {
         setActiveButton(buttonId);
       }
+    function handleCollectButtonClick(e, productId) {
+        // Stop the click event from propagating to the parent anchor tag
+        e.stopPropagation();
+      
+        // Add the product to the cart (to be implemented later)
+        console.log(`Product ${productId} added to cart`);
+      }
+
+      function handleCardClick(productId) {
+        console.log(`Navigating to product detail page for Product ${productId}`);
+        window.location.href = `/product/${productId}`;
+      }
+      
+      
+    
   return (
     <div className="home-page">
       <header className="header">
@@ -96,24 +116,29 @@ function HomePage() {
 </button>
 
           </div>
-          <div class="cards-container">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-          </div>
-          <div class="pagination">
-        <button class="pagination-arrow">&lt;</button>
-        <span class="pagination-page current">1</span>
-        <span class="pagination-page">2</span>
-        <span class="pagination-page">3</span>
-        <button class="pagination-arrow">&gt;</button>
-      </div>
+          <div className="cards-container">
+    {productImages.map((image, index) => (
+    <div key={index} className="card" onClick={() => handleCardClick(index + 1)}>
+      <img src={image} alt={`Product ${index + 1}`} className="product-image" />
+      <button className="collect-button" onClick={(e) => handleCollectButtonClick(e, index + 1)}>COLLECT</button>
+    </div>
+  ))}
+
+  <div className="card"></div>
+  <div className="card"></div>
+  <div className="card"></div>
+  <div className="card"></div>
+  <div className="card"></div>
+  <div className="card"></div>
+</div>
+
+    <div className="pagination">
+        <button className="pagination-arrow">&lt;</button>
+        <span className="pagination-page current">1</span>
+        <span className="pagination-page">2</span>
+        <span className="pagination-page">3</span>
+        <button className="pagination-arrow">&gt;</button>
+    </div>
         </div>
       </div>
     </div>
