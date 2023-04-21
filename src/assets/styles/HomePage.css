@@ -253,7 +253,7 @@
   }
 
   .home-page .sort-button {
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 20px;
     border: 2px solid #000;
@@ -262,11 +262,18 @@
     background-color: transparent;
     cursor: pointer;
     outline: none;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 6px 0 0 rgba(146, 143, 142, 0.3);
+    transition: top 0.1s ease, box-shadow 0.1s ease;
+  }
+
+  .home-page .sort-button:hover {
+    background-color: rgb(173, 227, 248);
   }
 
   .home-page .sort-button.active {
-    background-color: skyblue;
-    border-width: 5px;
+    background-color: rgb(173, 227, 248);
+    top: 6px;
   }
 
   .home-page .cards-container {
