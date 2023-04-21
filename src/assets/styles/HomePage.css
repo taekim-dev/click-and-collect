@@ -7,53 +7,6 @@
     overflow-x: hidden;
   }
 
-  /* Header */
-  .home-page .header {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    padding: 1rem;
-    background-color: white;
-    position: relative;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .home-page .logo {
-    width: 120px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .home-page .header-info {
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 55%;
-    margin-right: 10px;
-  }
-  
-  .home-page .cart-icon {
-    width: 8%;
-    height: 8%;
-    margin-left: 1rem;
-  }
-  
-  .home-page .coin-icon {
-    width: 7%;
-    height: 7%;
-    margin-left: 0.5rem;
-  }
-  
-  .home-page .coin-balance {
-    font-size: 2.5rem;
-    font-family: monospace;
-    font-weight: bold;
-    margin-left: 0.1rem;
-  }
-
   /* Left Pane */
   .home-page .left-pane {
     margin-left: 5%;
@@ -277,6 +230,7 @@
     background-color: rgb(173, 227, 248);
     top: 3px;
     box-shadow: none;
+    border: 3px solid #000;
   }
 
   .home-page .cards-container {
