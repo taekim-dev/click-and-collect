@@ -16,6 +16,15 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
+  }
+  
+  .header .logo:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header .logo:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   }
   
   .header .header-info {
@@ -30,6 +39,15 @@
     width: 8%;
     height: 8%;
     margin-left: 1rem;
+    cursor: pointer;
+  }
+  
+  .header .cart-icon:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header .cart-icon:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   }
   
   .header .coin-icon {
