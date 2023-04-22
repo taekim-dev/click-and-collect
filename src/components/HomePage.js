@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header';
+import { useNavigate } from 'react-router-dom';
 import '../assets/styles/HomePage.css';
 import coinIcon from '../assets/images/coin-icon.png';
 import product1 from '../assets/images/product-1.png';
@@ -9,7 +10,8 @@ import product3 from '../assets/images/product-3.png';
 function HomePage() {
     const [activeButton, setActiveButton] = useState('top-rated');
     const productImages = [product1, product2, product3];
-    
+    const navigate = useNavigate();
+
     function handleButtonClick(buttonId) {
         setActiveButton(buttonId);
       }
@@ -23,10 +25,8 @@ function HomePage() {
 
       function handleCardClick(productId) {
         console.log(`Navigating to product detail page for Product ${productId}`);
-        window.location.href = `/product/${productId}`;
-      }
-      
-      
+        navigate(`/product/${productId}`);
+    }
     
   return (
     <div className="home-page">
