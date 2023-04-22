@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/HomePage.css';
@@ -8,25 +8,44 @@ import product2 from '../assets/images/product-2.png';
 import product3 from '../assets/images/product-3.png';
 
 function HomePage() {
-    const [activeButton, setActiveButton] = useState('top-rated');
-    const productImages = [product1, product2, product3];
-    const navigate = useNavigate();
+  const [activeButton, setActiveButton] = useState('top-rated');
+  const [products, setProducts] = useState([]);
+  const productImages = [product1, product2, product3];
+  const navigate = useNavigate();
 
-    function handleButtonClick(buttonId) {
-        setActiveButton(buttonId);
-      }
-    function handleCollectButtonClick(e, productId) {
-        // Stop the click event from propagating to the parent anchor tag
-        e.stopPropagation();
-      
-        // Add the product to the cart (to be implemented later)
-        console.log(`Product ${productId} added to cart`);
+  useEffect(() => {
+    async function fetchData() {
+      let data;
+
+      try {
+        const response = await fetch('https://dummyjson.com/products');
+        data = await response.json();
+        console.log(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
       }
 
-      function handleCardClick(productId) {
-        console.log(`Navigating to product detail page for Product ${productId}`);
-        navigate(`/product/${productId}`);
+      return data;
     }
+
+    fetchData().then((data) => {
+      setProducts(data);
+    });
+  }, []);
+
+  function handleButtonClick(buttonId) {
+    setActiveButton(buttonId);
+  }
+
+  function handleCollectButtonClick(e, productId) {
+    e.stopPropagation();
+    console.log(`Product ${productId} added to cart`);
+  }
+
+  function handleCardClick(productId) {
+    console.log(`Navigating to product detail page for Product ${productId}`);
+    navigate(`/product/${productId}`);
+  }
     
   return (
     <div className="home-page">

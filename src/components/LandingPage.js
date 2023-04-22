@@ -11,13 +11,15 @@ function LandingPage() {
 
   const [inputValue, setInputValue] = useState('');
 
-  const handleInputChange = (event) => setInputValue(event.target.value);
+  function handleInputChange(event) {
+    setInputValue(event.target.value);
+  }
 
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     event.preventDefault();
     setUsername(inputValue);
-    navigate('/home'); // Redirect to the Home page
-  };
+    navigate('/home');
+  }
 
   return (
     <div className="landing-page">

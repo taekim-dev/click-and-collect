@@ -23,40 +23,40 @@ function ProductDetailPage() {
     description: `This is a description for Product ${productId}`,
   };
 
-  const handleCollectButtonClick = () => {
+  function handleCollectButtonClick() {
     setCartItems([...cartItems, product]);
-  };
+  }
 
-  const handleBackButtonClick = () => {
+  function handleBackButtonClick() {
     navigate(-1);
-  };
+  }
 
   return (
     <div className="product-detail-page">
       <Header />
       <div className="product-detail-page-wrapper">
-      <div className="content">
-        <button className="back-button" onClick={handleBackButtonClick}>
-          &lt;- Back
-        </button>
-        <div className="product-detail">
-          <div className="product-image-container">
-            <img src={product.image} alt={product.title} className="product-image" />
-          </div>
-          <div className="product-info">
-            <div className="ratings">★★★★★</div>
-            <h2 className="product-title">{product.title}</h2>
-            <div className="product-price">
-              <img src={coinIcon} alt="Coin" className="coin-icon" />
-              <span>{product.price}</span>
+        <div className="content">
+          <button className="back-button" onClick={handleBackButtonClick}>
+            &lt;- Back
+          </button>
+          <div className="product-detail">
+            <div className="product-image-container">
+              <img src={product.image} alt={product.title} className="product-image" />
             </div>
-            <p className="product-description">{product.description}</p>
-            <button className="collect-button" onClick={handleCollectButtonClick}>
-              COLLECT
-            </button>
+            <div className="product-info">
+              <div className="ratings">★★★★★</div>
+              <h2 className="product-title">{product.title}</h2>
+              <div className="product-price">
+                <img src={coinIcon} alt="Coin" className="coin-icon" />
+                <span>{product.price}</span>
+              </div>
+              <p className="product-description">{product.description}</p>
+              <button className="collect-button" onClick={handleCollectButtonClick}>
+                COLLECT
+              </button>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );

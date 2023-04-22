@@ -11,17 +11,22 @@ function Header() {
   const { cartItems, coinBalance } = useContext(AppContext);
   const navigate = useNavigate();
 
-  const handleCartIconClick = () => {
+  function handleCartIconClick() {
     navigate('/cart');
-  };
+  }
 
-  const handleLogoClick = () => {
+  function handleLogoClick() {
     navigate('/home');
-  };
+  }
 
   return (
     <header className="header">
-      <img src={logo} alt="Logo" className="logo" onClick={handleLogoClick} />
+      <img
+        src={logo}
+        alt="Logo"
+        className="logo"
+        onClick={handleLogoClick}
+      />
       <div className="header-info">
         <img
           src={cartItems.length > 0 ? cartIcon2 : cartIcon}
