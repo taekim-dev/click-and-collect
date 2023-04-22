@@ -1,21 +1,18 @@
 /* Header */
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: baseline;
     padding: 1rem;
     background-color: white;
-    position: relative;
     margin-top: 15px;
     margin-bottom: 15px;
   }
   
   .header .logo {
     width: 120px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    grid-column: 2;
+    justify-self: center;
     cursor: pointer;
   }
   
@@ -30,14 +27,14 @@
   .header .header-info {
     display: flex;
     align-items: center;
-    position: relative;
-    left: 55%;
+    grid-column: 3;
+    justify-self: end;
     margin-right: 10px;
   }
   
   .header .cart-icon {
-    width: 8%;
-    height: 8%;
+    width: 4rem;
+    height: 4rem;
     margin-left: 1rem;
     cursor: pointer;
   }
@@ -51,8 +48,8 @@
   }
   
   .header .coin-icon {
-    width: 7%;
-    height: 7%;
+    width: 3rem;
+    height: 3rem;
     margin-left: 0.5rem;
   }
   
