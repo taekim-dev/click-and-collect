@@ -34,6 +34,7 @@ function ProductDetailPage() {
   return (
     <div className="product-detail-page">
       <Header />
+      <div className="product-detail-page-wrapper">
       <div className="content">
         <button className="back-button" onClick={handleBackButtonClick}>
           &lt;- Back
@@ -55,6 +56,7 @@ function ProductDetailPage() {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

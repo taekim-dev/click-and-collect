@@ -1,16 +1,16 @@
-.cart-page {
+.cart-page .cart-page-wrapper {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
   }
   
-  .cart-container {
+  .cart-page .cart-page-wrapper .cart-container {
     display: flex;
     justify-content: center;
     padding: 20px;
   }
   
-  .left-pane {
+  .cart-page .cart-page-wrapper .left-pane {
     flex: 6;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
     margin-right: 20px;
   }
   
-  .right-pane {
+  .cart-page .cart-page-wrapper .right-pane {
     flex: 2.5;
     display: flex;
     flex-direction: column;
@@ -26,45 +26,45 @@
     gap: 20px;
   }
   
-  .cart-item {
+  .cart-page .cart-page-wrapper .cart-item {
     display: flex;
     align-items: center;
     gap: 20px;
   }
   
-  .product-image-container {
+  .cart-page .cart-page-wrapper .product-image-container {
     flex: 1;
     border: 1px solid black;
     border-radius: 5px;
     overflow: hidden;
   }
   
-  .product-image {
+  .cart-page .cart-page-wrapper .product-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .product-title {
+  .cart-page .cart-page-wrapper .product-title {
     font-size: 30px;
     flex: 3;
     cursor: pointer;
   }
   
-  .product-price {
+  .cart-page .cart-page-wrapper .product-price {
     display: flex;
     align-items: center;
     font-size: 30px;
     flex: 1;
   }
   
-  .coin-icon {
+  .cart-page .cart-page-wrapper .coin-icon {
     width: 30px;
     height: 30px;
     margin-right: 5px;
   }
   
-  .remove-button {
+  .cart-page .cart-page-wrapper .remove-button {
     font-size: 30px;
     background-color: transparent;
     border: none;
@@ -72,25 +72,25 @@
     flex: 1;
   }
   
-  .number {
+  .cart-page .cart-page-wrapper .number {
     color: blue;
   }
   
-  .items-count {
+  .cart-page .cart-page-wrapper .items-count {
     font-size: 24px;
   }
   
-  .total-text {
+  .cart-page .cart-page-wrapper .total-text {
     font-size: 24px;
   }
   
-  .total-price {
+  .cart-page .cart-page-wrapper .total-price {
     display: flex;
     align-items: center;
     font-size: 24px;
   }
   
-  .pay-button {
+  .cart-page .cart-page-wrapper .pay-button {
     font-size: 24px;
     font-weight: bold;
     background-color: transparent;
@@ -101,11 +101,11 @@
     transition: 0.2s;
   }
   
-  .pay-button:hover {
+  .cart-page .cart-page-wrapper .pay-button:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
   
-  .pay-button:active {
+  .cart-page .cart-page-wrapper .pay-button:active {
     transform: translateY(2px);
   }
   

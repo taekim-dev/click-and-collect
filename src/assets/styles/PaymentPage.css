@@ -1,41 +1,41 @@
-.payment-page {
+.payment-page .payment-page-wrapper {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
   }
   
-  .content {
+  .payment-page .payment-page-wrapper .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
   
-  .ship-to {
+  .payment-page .payment-page-wrapper .ship-to {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
-  .order-details {
+  .payment-page .payment-page-wrapper .order-details {
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
   
-  .total-coins {
+  .payment-page .payment-page-wrapper .total-coins {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
   
-  .coin-icon {
+  .payment-page .payment-page-wrapper .coin-icon {
     width: 30px;
     height: 30px;
     margin-right: 5px;
   }
   
-  .action-button {
+  .payment-page .payment-page-wrapper .action-button {
     font-size: 1.5rem;
     font-weight: bold;
     background-color: transparent;
@@ -46,11 +46,11 @@
     transition: 0.2s;
   }
   
-  .action-button:hover {
+  .payment-page .payment-page-wrapper .action-button:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
   
-  .action-button:active {
+  .payment-page .payment-page-wrapper .action-button:active {
     transform: translateY(2px);
   }
   

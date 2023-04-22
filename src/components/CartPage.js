@@ -17,6 +17,7 @@ function CartPage() {
   return (
     <div className="cart-page">
       <Header />
+      <div className="cart-page-wrapper">
       <div className="cart-container">
         <div className="left-pane">
           {cartItems.map((item) => (
@@ -46,6 +47,7 @@ function CartPage() {
           </div>
           <button className="pay-button">PAY</button>
         </div>
+      </div>
       </div>
     </div>
   );

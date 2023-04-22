@@ -22,6 +22,7 @@ function PaymentPage() {
   return (
     <div className="payment-page">
       <Header />
+      <div className="payment-page-wrapper">
       <div className="content">
         <h1 className="ship-to">{isOrderCompleted ? 'Thank you for your order' : `Ship To: ${username}`}</h1>
         <p className="order-details">{isOrderCompleted ? 'Items are on the way' : `Product 1 & ${cartItems.length - 1} other items`}</p>
@@ -35,6 +36,7 @@ function PaymentPage() {
         >
           {isOrderCompleted ? 'Shop Again' : 'Order'}
         </button>
+      </div>
       </div>
     </div>
   );
