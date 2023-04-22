@@ -1,0 +1,111 @@
+.cart-page {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+  
+  .cart-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .left-pane {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 20px;
+  }
+  
+  .right-pane {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .product-image-container {
+    flex: 1;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-title {
+    font-size: 30px;
+    flex: 3;
+    cursor: pointer;
+  }
+  
+  .product-price {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    flex: 1;
+  }
+  
+  .coin-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  
+  .remove-button {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+  }
+  
+  .number {
+    color: blue;
+  }
+  
+  .items-count {
+    font-size: 24px;
+  }
+  
+  .total-text {
+    font-size: 24px;
+  }
+  
+  .total-price {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  .pay-button {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .pay-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .pay-button:active {
+    transform: translateY(2px);
+  }
+  
