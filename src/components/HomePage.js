@@ -3,63 +3,40 @@ import Header from './Header';
 import { useNavigate } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import '../assets/styles/HomePage.css';
+import dummyData from '../data/dummyData.json';
+import mapDummyJSONToProducts from '../mappers/mapDummyJSONToProducts';
 import coinIcon from '../assets/images/coin-icon.png';
-import product1 from '../assets/images/product-1.png';
-import product2 from '../assets/images/product-2.png';
-import product3 from '../assets/images/product-3.png';
 
 function HomePage() {
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
 
   const [activeButton, setActiveButton] = useState('top-rated');
   const [products, setProducts] = useState([]);
-  const productImages = [product1, product2, product3];
   const navigate = useNavigate();
 
   useEffect(() => {
-    async function fetchData() {
-      let data;
-
-      try {
-        const response = await fetch('https://dummyjson.com/products');
-        data = await response.json();
-        console.log(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-
-      return data;
-    }
-
-    fetchData().then((data) => {
-      setProducts(data);
-    });
+    const data = mapDummyJSONToProducts(dummyData.products);
+    setProducts(data);
+    console.log(products);
   }, []);
 
   function handleButtonClick(buttonId) {
     setActiveButton(buttonId);
   }
 
-  function handleCollectButtonClick(e, productId) {
+  function handleCollectButtonClick(e, product) {
     e.stopPropagation();
-    console.log(`Product ${productId} added to cart`);
-
-    const product = {
-      id: productId,
-      image: productImages[productId - 1],
-      title: `Product ${productId}`,
-      price: 10 * productId,
-      description: `This is a description for Product ${productId}`,
-    };
+    console.log(`Product ${product.id} added to cart`);
 
     setCartItems([...cartItems, product]);
     setCoinBalance(coinBalance - product.price);
   }
 
-  function handleCardClick(productId) {
-    console.log(`Navigating to product detail page for Product ${productId}`);
-    navigate(`/product/${productId}`);
+  function handleCardClick(product) {
+    console.log(`Navigating to product detail page for Product ${product.id}`);
+    navigate(`/product/${product.id}`, { state: { product } });
   }
+
     
   return (
     <div className="home-page">
@@ -122,41 +99,41 @@ function HomePage() {
           <div className="sorting-container">
             <span className="sorted-by-text">Sorted by</span>
             <button
-  className={`sort-button top-rated${activeButton === 'top-rated' ? ' active' : ''}`}
-  onClick={() => handleButtonClick('top-rated')}
->
-  Top Rated
-</button>
-<button
-  className={`sort-button lowest${activeButton === 'lowest' ? ' active' : ''}`}
-  onClick={() => handleButtonClick('lowest')}
->
-  Lowest Price
-</button>
-<button
-  className={`sort-button highest${activeButton === 'highest' ? ' active' : ''}`}
-  onClick={() => handleButtonClick('highest')}
->
-  Highest Price
-</button>
-
+                className={`sort-button top-rated${activeButton === 'top-rated' ? ' active' : ''}`}
+                onClick={() => handleButtonClick('top-rated')}
+                >
+                Top Rated
+                </button>
+                <button
+                className={`sort-button lowest${activeButton === 'lowest' ? ' active' : ''}`}
+                onClick={() => handleButtonClick('lowest')}
+                >
+                Lowest Price
+                </button>
+                <button
+                className={`sort-button highest${activeButton === 'highest' ? ' active' : ''}`}
+                onClick={() => handleButtonClick('highest')}
+                >
+                Highest Price
+                </button>
           </div>
           <div className="cards-container">
-    {productImages.map((image, index) => (
-    <div key={index} className="card" onClick={() => handleCardClick(index + 1)}>
-      <img src={image} alt={`Product ${index + 1}`} className="product-image" />
-      <button className="collect-button" onClick={(e) => handleCollectButtonClick(e, index + 1)}>COLLECT</button>
-    </div>
-  ))}
-
-  <div className="card"></div>
-  <div className="card"></div>
-  <div className="card"></div>
-  <div className="card"></div>
-  <div className="card"></div>
-  <div className="card"></div>
-</div>
-
+            {products.map((product, index) => (
+                <div
+                key={index}
+                className="card"
+                onClick={() => handleCardClick(product)}
+                >
+                <img src={product.image} alt={product.title} className="product-image" />
+                <button
+                    className="collect-button"
+                    onClick={(e) => handleCollectButtonClick(e, product)}
+                >
+                    COLLECT
+                </button>
+                </div>
+            ))}
+            </div>
     <div className="pagination">
         <button className="pagination-arrow">&lt;</button>
         <span className="pagination-page current">1</span>

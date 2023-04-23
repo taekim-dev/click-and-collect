@@ -1,27 +1,16 @@
 import React, { useContext } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import Header from './Header';
 import '../assets/styles/ProductDetailPage.css';
-import product1 from '../assets/images/product-1.png';
-import product2 from '../assets/images/product-2.png';
-import product3 from '../assets/images/product-3.png';
 import coinIcon from '../assets/images/coin-icon.png';
 import AppContext from '../context/AppContext';
-
-const productImages = [product1, product2, product3];
 
 function ProductDetailPage() {
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
   const { id } = useParams();
-  const productId = parseInt(id, 10);
+  const location = useLocation();
+  const product = location.state.product;
   const navigate = useNavigate();
-  const product = {
-    id: productId,
-    image: productImages[productId - 1],
-    title: `Product ${productId}`,
-    price: 10 * productId,
-    description: `This is a description for Product ${productId}`,
-  };
 
   function handleCollectButtonClick() {
     setCartItems([...cartItems, product]);
@@ -31,6 +20,15 @@ function ProductDetailPage() {
   function handleBackButtonClick() {
     navigate(-1);
   }
+
+  function generateStars(rating) {
+    let stars = '';
+    for (let i = 0; i < rating; i++) {
+      stars += '★';
+    }
+    return stars;
+  }
+  
 
   return (
     <div className="product-detail-page">
@@ -45,7 +43,7 @@ function ProductDetailPage() {
               <img src={product.image} alt={product.title} className="product-image" />
             </div>
             <div className="product-info">
-              <div className="ratings">★★★★★</div>
+            <div className="ratings">{generateStars(product.rating)}</div>
               <h2 className="product-title">{product.title}</h2>
               <div className="product-price">
                 <img src={coinIcon} alt="Coin" className="coin-icon" />
