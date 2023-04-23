@@ -23,6 +23,10 @@ function PaymentPage() {
     navigate('/home');
   }
 
+  function handleBackToCartClick() {
+    navigate('/cart');
+  }
+
   return (
     <div className="payment-page">
       <Header />
@@ -44,6 +48,14 @@ function PaymentPage() {
           >
             {isOrderCompleted ? 'Shop Again' : 'Order'}
           </button>
+          {!isOrderCompleted && (
+            <button
+                className="back-to-cart-button"
+                onClick={handleBackToCartClick}
+            >
+             &lt;- Cart
+            </button>
+          )}
         </div>
       </div>
     </div>

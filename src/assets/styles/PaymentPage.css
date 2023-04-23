@@ -54,3 +54,23 @@
     transform: translateY(2px);
   }
   
+.payment-page .payment-page-wrapper .back-to-cart-button {
+    font-family: 'Courier New', monospace;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+  
+  .payment-page .payment-page-wrapper .back-to-cart-button:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  }
+
+  .payment-page .payment-page-wrapper .back-to-cart-button:active{
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  

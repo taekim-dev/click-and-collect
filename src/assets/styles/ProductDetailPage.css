@@ -20,8 +20,18 @@
     cursor: pointer;
     padding: 10px 20px;
     margin-bottom: 20px;
+    
   }
   
+  .product-detail-page .product-detail-page-wrapper .back-button:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  }
+
+  .product-detail-page .product-detail-page-wrapper .back-button:active{
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+
   .product-detail-page .product-detail-page-wrapper .product-detail {
     display: flex;
   }
