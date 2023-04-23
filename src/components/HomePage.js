@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Header from './Header';
-import { useNavigate } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import '../assets/styles/HomePage.css';
 import dummyData from '../data/dummyData.json';
@@ -14,14 +14,45 @@ function HomePage() {
   const [activeButton, setActiveButton] = useState('top-rated');
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [ratingRange, setRatingRange] = useState(3);
+  const [discountFilter, setDiscountFilter] = useState(false);
+  const [inStockFilter, setInStockFilter] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(20);
+
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const filteredProducts = sortProducts(
+    (selectedCategory === 'all'
+      ? products
+      : products.filter((product) => formatCategory(product.category) === selectedCategory)
+    )
+    .filter((product) => product.price >= minPrice && product.price <= maxPrice)
+    .filter((product) => product.rating >= ratingRange)
+    .filter((product) => !discountFilter || product.discount > 0)
+    .filter((product) => !inStockFilter || product.instock)
+  );  
 
   useEffect(() => {
     const data = mapDummyJSONToProducts(dummyData.products);
     setProducts(data);
     setCategories(getUniqueCategories(data));
-  }, [products]);  
+  }, []);  
+  
+  useEffect(() => {
+    const storedFilterState = localStorage.getItem("filterState");
+    if (storedFilterState) {
+      const { selectedCategory, activeButton, ratingRange } = JSON.parse(storedFilterState);
+      setSelectedCategory(selectedCategory);
+      setActiveButton(activeButton);
+      setRatingRange(ratingRange || 3); 
+    }
+  }, []);
+  
+  
 
   function handleButtonClick(buttonId) {
     setActiveButton(buttonId);
@@ -37,12 +68,17 @@ function HomePage() {
 
   function handleCardClick(product) {
     console.log(`Navigating to product detail page for Product ${product.id}`);
-    navigate(`/product/${product.id}`, { state: { product } });
+  
+    localStorage.setItem("filterState", JSON.stringify({ selectedCategory, activeButton, ratingRange }));
+  
+    navigate(`/product/${product.id}`, {
+      state: { product },
+    });
   }
-
+  
 
   function calculateNumberOfPages() {
-    return Math.ceil(products.length / ITEMS_PER_PAGE);
+    return Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   }
 
   function getUniqueCategories(products) {
@@ -55,6 +91,10 @@ function HomePage() {
     return category.charAt(0).toUpperCase() + category.slice(1);
   }
 
+  function handleCategoryChange(e) {
+    setSelectedCategory(e.target.value);
+  }
+
   function generatePageNumbers() {
     const numberOfPages = calculateNumberOfPages();
     const pageNumbers = [];
@@ -65,7 +105,37 @@ function HomePage() {
   
     return pageNumbers;
   }
-  
+
+    function sortProducts(products) {
+        return products.sort((a, b) => {
+          switch (activeButton) {
+            case 'top-rated':
+              return b.rating - a.rating;
+            case 'lowest':
+              return a.price - b.price;
+            case 'highest':
+              return b.price - a.price;
+            default:
+              return 0;
+          }
+        });
+      }
+    
+      function handleMaxPriceChange(e) {
+        if (e.target.value < minPrice) {
+          setMaxPrice(minPrice);
+        } else {
+          setMaxPrice(e.target.value);
+        }
+      }
+    
+      function handleDiscountFilterChange(e) {
+        setDiscountFilter(e.target.checked);
+      }
+      
+      function handleInStockFilterChange(e) {
+        setInStockFilter(e.target.checked);
+      }      
     
   return (
     <div className="home-page">
@@ -73,22 +143,27 @@ function HomePage() {
       <div className="panes-container">
         <div className="left-pane">
           <h2 className="category-title">Category</h2>
-          <select className="category-dropdown">
+          <select
+            className="category-dropdown"
+            value={selectedCategory}
+            onChange={handleCategoryChange} 
+          >
             <option value="all">All</option>
             {categories.map((category, index) => (
-                <option key={index} value={category}>
+              <option key={index} value={category}>
                 {formatCategory(category)}
-                </option>
+              </option>
             ))}
-            </select>
+          </select>
           <h2 className="rating-title">Ratings</h2>
           <input
-            type="range"
-            min="3"
-            max="5"
-            defaultValue="3"
-            className="rating-range"
-          />
+                type="range"
+                min="3"
+                max="5"
+                value={ratingRange}
+                className="rating-range"
+                onChange={(e) => setRatingRange(e.target.value)}
+            />
           <div className="rating-labels">
             <span className="rating-label">★3</span>
             <span className="rating-label">★4</span>
@@ -96,36 +171,47 @@ function HomePage() {
           </div>
           <h2 className="prices-title">Prices<img src={coinIcon} alt="Coin" className="prices-coin-icon" /></h2>
           <div className="prices-range-container">
-            <input
-              type="number"
-              min="0"
-              max="20"
-              defaultValue="0"
-              className="min-price-input"
+          <input
+                type="number"
+                min="0"
+                max="20"
+                value={minPrice}
+                className="min-price-input"
+                onChange={(e) => setMinPrice(e.target.value)}
+                />
+                <input
+                type="range"
+                min="0"
+                max="20"
+                value={minPrice}
+                className="price-range"
+                onChange={(e) => setMinPrice(e.target.value)}
+                />
+                <input
+                type="number"
+                min="0"
+                max="20"
+                value={maxPrice}
+                className="max-price-input"
+                onChange={(e) => setMaxPrice(e.target.value)}
             />
-            <input
-              type="range"
-              min="0"
-              max="20"
-              defaultValue="0"
-              className="price-range"
-            />
-            <input
-              type="number"
-              min="0"
-              max="20"
-              defaultValue="20"
-              className="max-price-input"
-            />
+
           </div>
           <div className="checkbox-container">
             <label className="checkbox-label">
-              <input type="checkbox" className="discount-checkbox" />
+              <input type="checkbox" 
+              className="discount-checkbox" 
+              onChange={handleDiscountFilterChange}
+              />
               Discount
             </label>
             <label className="checkbox-label">
-              <input type="checkbox" className="in-stock-checkbox" />
-              In Stock
+            <input
+                type="checkbox"
+                className="in-stock-checkbox"
+                onChange={handleInStockFilterChange}
+            />
+            In Stock
             </label>
           </div>
         </div>
@@ -152,13 +238,13 @@ function HomePage() {
                 </button>
           </div>
           <div className="cards-container">
-          {products
-            .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
-            .map((product, index) => (
+          {filteredProducts 
+              .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
+              .map((product, index) => (
                 <div
-                key={index}
-                className="card"
-                onClick={() => handleCardClick(product)}
+                  key={index}
+                  className="card"
+                  onClick={() => handleCardClick(product)}
                 >
                 <img src={product.image} alt={product.title} className="product-image" />
                 <button
