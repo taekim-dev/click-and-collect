@@ -28,6 +28,9 @@ function PaymentPage() {
   }
 
   const isCartEmpty = cartItems.length === 0;
+  const firstItemName = !isCartEmpty ? cartItems[0].title : '';
+  console.log(firstItemName);
+  console.log(cartItems);
 
   return (
     <div className="payment-page">
@@ -42,7 +45,7 @@ function PaymentPage() {
               ? 'Items are on the way'
               : isCartEmpty
               ? 'No Item in your cart'
-              : `Product 1 & ${cartItems.length - 1} other items`}
+              : `${firstItemName} & ${cartItems.length - 1} other items`}
           </p>
           <div className="total-coins">
             <img src={coinIcon} alt="Coin" className="coin-icon" />
