@@ -7,7 +7,7 @@ import AppContext from '../context/AppContext';
 import coinIcon from '../assets/images/coin-icon.png';
 
 function PaymentPage() {
-  const { username, cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
+  const { username, cartItems, setCartItems, setCoinBalance } = useContext(AppContext);
   const [isOrderCompleted, setIsOrderCompleted] = useState(false);
   const navigate = useNavigate();
 
