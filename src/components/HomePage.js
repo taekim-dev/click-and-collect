@@ -13,14 +13,15 @@ function HomePage() {
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
   const [activeButton, setActiveButton] = useState('top-rated');
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const navigate = useNavigate();
 
   useEffect(() => {
     const data = mapDummyJSONToProducts(dummyData.products);
     setProducts(data);
-    console.log(products);
-  }, []);
+    setCategories(getUniqueCategories(data));
+  }, [products]);  
 
   function handleButtonClick(buttonId) {
     setActiveButton(buttonId);
@@ -44,6 +45,16 @@ function HomePage() {
     return Math.ceil(products.length / ITEMS_PER_PAGE);
   }
 
+  function getUniqueCategories(products) {
+    const categoriesSet = new Set(products.map((product) => formatCategory(product.category)));
+    const sortedCategories = Array.from(categoriesSet).sort((a, b) => a.localeCompare(b));
+    return sortedCategories;
+  }  
+
+  function formatCategory(category) {
+    return category.charAt(0).toUpperCase() + category.slice(1);
+  }
+
   function generatePageNumbers() {
     const numberOfPages = calculateNumberOfPages();
     const pageNumbers = [];
@@ -64,7 +75,12 @@ function HomePage() {
           <h2 className="category-title">Category</h2>
           <select className="category-dropdown">
             <option value="all">All</option>
-          </select>
+            {categories.map((category, index) => (
+                <option key={index} value={category}>
+                {formatCategory(category)}
+                </option>
+            ))}
+            </select>
           <h2 className="rating-title">Ratings</h2>
           <input
             type="range"

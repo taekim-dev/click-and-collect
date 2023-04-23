@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Header from './Header';
 import '../assets/styles/ProductDetailPage.css';
 import coinIcon from '../assets/images/coin-icon.png';
@@ -7,7 +7,6 @@ import AppContext from '../context/AppContext';
 
 function ProductDetailPage() {
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
-  const { id } = useParams();
   const location = useLocation();
   const product = location.state.product;
   const navigate = useNavigate();
