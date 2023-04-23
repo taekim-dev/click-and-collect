@@ -27,6 +27,8 @@ function PaymentPage() {
     navigate('/cart');
   }
 
+  const isCartEmpty = cartItems.length === 0;
+
   return (
     <div className="payment-page">
       <Header />
@@ -36,7 +38,11 @@ function PaymentPage() {
             {isOrderCompleted ? 'Thank you for your order' : `Ship To: ${username}`}
           </h1>
           <p className="order-details">
-            {isOrderCompleted ? 'Items are on the way' : `Product 1 & ${cartItems.length - 1} other items`}
+            {isOrderCompleted
+              ? 'Items are on the way'
+              : isCartEmpty
+              ? 'No Item in your cart'
+              : `Product 1 & ${cartItems.length - 1} other items`}
           </p>
           <div className="total-coins">
             <img src={coinIcon} alt="Coin" className="coin-icon" />
@@ -45,19 +51,20 @@ function PaymentPage() {
           <button
             className="action-button"
             onClick={isOrderCompleted ? handleShopAgainClick : handleOrderClick}
+            disabled={isCartEmpty}
           >
             {isOrderCompleted ? 'Shop Again' : 'Order'}
           </button>
-          {!isOrderCompleted && (
-            <button
-                className="back-to-cart-button"
-                onClick={handleBackToCartClick}
-            >
-             &lt;- Cart
-            </button>
-          )}
         </div>
       </div>
+      {!isOrderCompleted && (
+        <button
+          className="cart-button"
+          onClick={handleBackToCartClick}
+        >
+          &lt;- Cart
+        </button>
+      )}
     </div>
   );
 }

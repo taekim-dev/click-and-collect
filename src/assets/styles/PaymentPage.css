@@ -1,7 +1,15 @@
+.payment-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 .payment-page .payment-page-wrapper {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
   }
   
   .payment-page .payment-page-wrapper .content {
@@ -9,6 +17,8 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    border: 2px dotted black;
+    width: fit-content;
   }
   
   .payment-page .payment-page-wrapper .ship-to {
@@ -54,7 +64,7 @@
     transform: translateY(2px);
   }
   
-.payment-page .payment-page-wrapper .back-to-cart-button {
+  .cart-button {
     font-family: 'Courier New', monospace;
     font-size: 30px;
     font-weight: bold;
@@ -65,12 +75,11 @@
     margin-top: 20px;
   }
   
-  .payment-page .payment-page-wrapper .back-to-cart-button:hover{
+  .cart-button:hover{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   }
-
-  .payment-page .payment-page-wrapper .back-to-cart-button:active{
+  
+  .cart-button:active{
     transform: translateY(2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   }
-  

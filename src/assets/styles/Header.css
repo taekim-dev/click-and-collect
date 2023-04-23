@@ -26,11 +26,11 @@
   
   .header .header-info {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: baseline;
     grid-column: 3;
     justify-self: end;
-    margin-right: 10px;
+    margin-right: 100px;
   }
   
   .header .username{
@@ -63,6 +63,6 @@
     font-size: 2.5rem;
     font-family: monospace;
     font-weight: bold;
-    margin-left: 0.1rem;
+    margin-left: 0.3rem;
   }
   
