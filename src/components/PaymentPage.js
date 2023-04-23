@@ -2,11 +2,12 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import '../assets/styles/PaymentPage.css';
+import { INITIAL_COIN_BALANCE } from '../context/AppContext';
 import AppContext from '../context/AppContext';
 import coinIcon from '../assets/images/coin-icon.png';
 
 function PaymentPage() {
-  const { username, cartItems, setCartItems } = useContext(AppContext);
+  const { username, cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
   const [isOrderCompleted, setIsOrderCompleted] = useState(false);
   const navigate = useNavigate();
 
@@ -18,6 +19,7 @@ function PaymentPage() {
 
   function handleShopAgainClick() {
     setCartItems([]);
+    setCoinBalance(INITIAL_COIN_BALANCE);
     navigate('/home');
   }
 

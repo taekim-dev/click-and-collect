@@ -6,14 +6,16 @@ import AppContext from '../context/AppContext';
 import '../assets/styles/CartPage.css';
 
 function CartPage() {
-  const { cartItems, setCartItems } = useContext(AppContext);
+  const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
   const navigate = useNavigate();
 
   const totalItems = cartItems.length;
   const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   function handleRemoveFromCart(id) {
+    const removedItem = cartItems.find((item) => item.id === id);
     setCartItems(cartItems.filter((item) => item.id !== id));
+    setCoinBalance(coinBalance + removedItem.price);
   }
 
   function handlePayButtonClick() {

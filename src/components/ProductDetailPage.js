@@ -11,7 +11,7 @@ import AppContext from '../context/AppContext';
 const productImages = [product1, product2, product3];
 
 function ProductDetailPage() {
-  const { cartItems, setCartItems } = useContext(AppContext);
+  const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
   const { id } = useParams();
   const productId = parseInt(id, 10);
   const navigate = useNavigate();
@@ -25,6 +25,7 @@ function ProductDetailPage() {
 
   function handleCollectButtonClick() {
     setCartItems([...cartItems, product]);
+    setCoinBalance(coinBalance - product.price);
   }
 
   function handleBackButtonClick() {

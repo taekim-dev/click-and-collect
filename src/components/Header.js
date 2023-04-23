@@ -8,7 +8,7 @@ import coinIcon from '../assets/images/coin-icon.png';
 import AppContext from '../context/AppContext';
 
 function Header() {
-  const { cartItems, coinBalance } = useContext(AppContext);
+  const { cartItems, coinBalance, username } = useContext(AppContext);
   const navigate = useNavigate();
 
   function handleCartIconClick() {
@@ -28,6 +28,7 @@ function Header() {
         onClick={handleLogoClick}
       />
       <div className="header-info">
+        <span className="username">Hello, {username}</span>
         <img
           src={cartItems.length > 0 ? cartIcon2 : cartIcon}
           alt="Cart"

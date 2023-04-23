@@ -26,12 +26,18 @@
   
   .header .header-info {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: baseline;
     grid-column: 3;
     justify-self: end;
     margin-right: 10px;
   }
   
+  .header .username{
+    font-family: monospace;
+    font-size: 1rem;
+  }
+
   .header .cart-icon {
     width: 4rem;
     height: 4rem;
