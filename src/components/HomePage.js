@@ -36,10 +36,14 @@ function HomePage() {
   );  
 
   useEffect(() => {
+    const getUniqueCategories = (products) => {
+      const categories = products.map((product) => product.category);
+      return Array.from(new Set(categories));
+    };
     const data = mapDummyJSONToProducts(dummyData.products);
     setProducts(data);
     setCategories(getUniqueCategories(data));
-  }, []);  
+  }, []);
   
   useEffect(() => {
     const storedFilterState = localStorage.getItem("filterState");
@@ -80,11 +84,7 @@ function HomePage() {
     return Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   }
 
-  function getUniqueCategories(products) {
-    const categoriesSet = new Set(products.map((product) => formatCategory(product.category)));
-    const sortedCategories = Array.from(categoriesSet).sort((a, b) => a.localeCompare(b));
-    return sortedCategories;
-  }  
+
 
   function formatCategory(category) {
     return category.charAt(0).toUpperCase() + category.slice(1);
