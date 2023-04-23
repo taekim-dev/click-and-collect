@@ -271,11 +271,17 @@
     padding: 0.5rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
   }
   
   .home-page .pagination-page.current {
     font-weight: bold;
+    cursor: default;
+  }
+
+  .home-page .pagination-page:not(.current):hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
   }
   
   .home-page .card {
@@ -290,7 +296,7 @@
   .home-page .card .product-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
   
   .home-page .collect-button {

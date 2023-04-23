@@ -7,11 +7,13 @@ import dummyData from '../data/dummyData.json';
 import mapDummyJSONToProducts from '../mappers/mapDummyJSONToProducts';
 import coinIcon from '../assets/images/coin-icon.png';
 
+const ITEMS_PER_PAGE = 9;
+
 function HomePage() {
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
-
   const [activeButton, setActiveButton] = useState('top-rated');
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -37,6 +39,22 @@ function HomePage() {
     navigate(`/product/${product.id}`, { state: { product } });
   }
 
+
+  function calculateNumberOfPages() {
+    return Math.ceil(products.length / ITEMS_PER_PAGE);
+  }
+
+  function generatePageNumbers() {
+    const numberOfPages = calculateNumberOfPages();
+    const pageNumbers = [];
+  
+    for (let i = 1; i <= numberOfPages; i++) {
+      pageNumbers.push(i);
+    }
+  
+    return pageNumbers;
+  }
+  
     
   return (
     <div className="home-page">
@@ -118,7 +136,9 @@ function HomePage() {
                 </button>
           </div>
           <div className="cards-container">
-            {products.map((product, index) => (
+          {products
+            .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
+            .map((product, index) => (
                 <div
                 key={index}
                 className="card"
@@ -134,13 +154,31 @@ function HomePage() {
                 </div>
             ))}
             </div>
-    <div className="pagination">
-        <button className="pagination-arrow">&lt;</button>
-        <span className="pagination-page current">1</span>
-        <span className="pagination-page">2</span>
-        <span className="pagination-page">3</span>
-        <button className="pagination-arrow">&gt;</button>
-    </div>
+            <div className="pagination">
+        <button
+            className="pagination-arrow"
+            onClick={() => setCurrentPage(1)}
+            disabled={currentPage === 1}
+        >
+            &lt;
+        </button>
+        {generatePageNumbers().map((number) => (
+            <span
+            key={number}
+            className={`pagination-page${currentPage === number ? ' current' : ''}`}
+            onClick={() => setCurrentPage(number)}
+            >
+            {number}
+            </span>
+        ))}
+        <button
+            className="pagination-arrow"
+            onClick={() => setCurrentPage(calculateNumberOfPages())}
+            disabled={currentPage === calculateNumberOfPages()}
+        >
+            &gt;
+        </button>
+        </div>
         </div>
       </div>
     </div>
