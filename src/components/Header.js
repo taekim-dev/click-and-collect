@@ -28,7 +28,7 @@ function Header() {
         onClick={handleLogoClick}
       />
       <div className="header-info">
-        {username && <span className="username">Hello, {username}</span>}
+        {username && <span className="username">User: {username}</span>}
         <img
           src={cartItems.length > 0 ? cartIcon2 : cartIcon}
           alt="Cart"
