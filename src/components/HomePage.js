@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import AppContext from '../context/AppContext';
 import '../assets/styles/HomePage.css';
@@ -23,7 +23,6 @@ function HomePage() {
   const [maxPrice, setMaxPrice] = useState(20);
 
   const navigate = useNavigate();
-  const location = useLocation();
 
   const filteredProducts = sortProducts(
     (selectedCategory === 'all'
@@ -121,6 +120,7 @@ function HomePage() {
         });
       }
     
+      /*
       function handleMaxPriceChange(e) {
         if (e.target.value < minPrice) {
           setMaxPrice(minPrice);
@@ -128,6 +128,7 @@ function HomePage() {
           setMaxPrice(e.target.value);
         }
       }
+      */
     
       function handleDiscountFilterChange(e) {
         setDiscountFilter(e.target.checked);
