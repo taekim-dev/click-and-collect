@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Header from './Header';
 import { useNavigate } from 'react-router-dom';
+import AppContext from '../context/AppContext';
 import '../assets/styles/HomePage.css';
 import coinIcon from '../assets/images/coin-icon.png';
 import product1 from '../assets/images/product-1.png';
@@ -8,6 +9,8 @@ import product2 from '../assets/images/product-2.png';
 import product3 from '../assets/images/product-3.png';
 
 function HomePage() {
+  const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
+
   const [activeButton, setActiveButton] = useState('top-rated');
   const [products, setProducts] = useState([]);
   const productImages = [product1, product2, product3];
@@ -40,6 +43,17 @@ function HomePage() {
   function handleCollectButtonClick(e, productId) {
     e.stopPropagation();
     console.log(`Product ${productId} added to cart`);
+
+    const product = {
+      id: productId,
+      image: productImages[productId - 1],
+      title: `Product ${productId}`,
+      price: 10 * productId,
+      description: `This is a description for Product ${productId}`,
+    };
+
+    setCartItems([...cartItems, product]);
+    setCoinBalance(coinBalance - product.price);
   }
 
   function handleCardClick(productId) {
