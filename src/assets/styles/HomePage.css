@@ -80,6 +80,23 @@
   .home-page .rating-range[value="3"]::-moz-range-thumb {
     background-color: rgb(255, 238, 0);
   }
+
+  .home-page .rating-range[value="4"]::-webkit-slider-thumb {
+    background-color: rgb(255, 238, 0);
+  }
+  
+  .home-page .rating-range[value="4"]::-moz-range-thumb {
+    background-color: rgb(255, 238, 0);
+  }
+  
+  .home-page .rating-range[value="5"]::-webkit-slider-thumb {
+    background-color: rgb(255, 238, 0);
+  }
+  
+  .home-page .rating-range[value="5"]::-moz-range-thumb {
+    background-color: rgb(255, 238, 0);
+  }
+  
   
   .home-page .rating-labels {
     display: flex;
