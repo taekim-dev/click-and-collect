@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import AppContext from '../context/AppContext';
@@ -35,15 +35,17 @@ function HomePage() {
     .filter((product) => !inStockFilter || product.instock)
   );  
 
+  const getUniqueCategories = useCallback((products) => {
+    const categoriesSet = new Set(products.map((product) => formatCategory(product.category)));
+    const sortedCategories = Array.from(categoriesSet).sort((a, b) => a.localeCompare(b));
+    return sortedCategories;
+  }, []);
+
   useEffect(() => {
-    const getUniqueCategories = (products) => {
-      const categories = products.map((product) => product.category);
-      return Array.from(new Set(categories));
-    };
     const data = mapDummyJSONToProducts(dummyData.products);
     setProducts(data);
     setCategories(getUniqueCategories(data));
-  }, []);
+  }, [getUniqueCategories]);  
   
   useEffect(() => {
     const storedFilterState = localStorage.getItem("filterState");
@@ -54,7 +56,6 @@ function HomePage() {
       setRatingRange(ratingRange || 3); 
     }
   }, []);
-  
   
 
   function handleButtonClick(buttonId) {
@@ -83,8 +84,6 @@ function HomePage() {
   function calculateNumberOfPages() {
     return Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   }
-
-
 
   function formatCategory(category) {
     return category.charAt(0).toUpperCase() + category.slice(1);
