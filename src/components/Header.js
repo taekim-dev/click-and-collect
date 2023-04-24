@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Header.css';
 import logo from '../assets/images/logo.png';
@@ -10,9 +10,15 @@ import CountUp from 'react-countup';
 import { usePrevious } from 'react-use';
 
 function Header() {
-  const { cartItems, coinBalance, username } = useContext(AppContext);
+  const { cartItems, coinBalance, username, setUsername } = useContext(AppContext);
   const navigate = useNavigate();
   const prevCoinBalance = usePrevious(coinBalance);
+
+  useEffect(() => {
+    if (!username) {
+      setUsername('Guest');
+    }
+  }, [username, setUsername]);
 
   function handleCartIconClick() {
     navigate('/cart');
@@ -31,7 +37,7 @@ function Header() {
         onClick={handleLogoClick}
       />
       <div className="header-info">
-        {username && <span className="username">User: {username}</span>}
+        <span className="username">{username}</span>
         <img
           src={cartItems.length > 0 ? cartIcon2 : cartIcon}
           alt="Cart"

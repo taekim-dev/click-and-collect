@@ -1,15 +1,22 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/LandingPage.css';
 import logo from '../assets/images/logo.png';
 import coinIcon from '../assets/images/coin-icon.png';
 import AppContext from '../context/AppContext';
+import { INITIAL_COIN_BALANCE } from '../context/AppContext';
 
 function LandingPage() {
-  const { setUsername, coinBalance } = useContext(AppContext);
+  const { setUsername, coinBalance, setCartItems, setCoinBalance } = useContext(AppContext);
   const navigate = useNavigate();
 
   const [inputValue, setInputValue] = useState('');
+
+  useEffect(() => {
+    setUsername('');
+    setCoinBalance(INITIAL_COIN_BALANCE);
+    setCartItems([]);
+  }, [setUsername, setCoinBalance, setCartItems]);
 
   function handleInputChange(event) {
     setInputValue(event.target.value);

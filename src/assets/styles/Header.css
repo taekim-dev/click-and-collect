@@ -34,7 +34,7 @@
   }
   
   .header .username{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace, sans-serif;
     font-size: 1.5rem;
   }
 
@@ -61,7 +61,7 @@
   
   .header .coin-balance {
     font-size: 2.5rem;
-    font-family: monospace;
+    font-family: monospace, sans-serif;
     font-weight: bold;
     margin-left: 0.3rem;
   }
