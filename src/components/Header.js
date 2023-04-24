@@ -6,10 +6,13 @@ import cartIcon from '../assets/images/cart-icon.png';
 import cartIcon2 from '../assets/images/cart-icon2.png';
 import coinIcon from '../assets/images/coin-icon.png';
 import AppContext from '../context/AppContext';
+import CountUp from 'react-countup';
+import { usePrevious } from 'react-use';
 
 function Header() {
   const { cartItems, coinBalance, username } = useContext(AppContext);
   const navigate = useNavigate();
+  const prevCoinBalance = usePrevious(coinBalance);
 
   function handleCartIconClick() {
     navigate('/cart');
@@ -36,7 +39,14 @@ function Header() {
           onClick={handleCartIconClick}
         />
         <img src={coinIcon} alt="Coin" className="coin-icon" />
-        <span className="coin-balance">{coinBalance}</span>
+        <CountUp
+          start={prevCoinBalance !== undefined ? prevCoinBalance : coinBalance}
+          end={coinBalance}
+          duration={1}
+          separator=","
+          className="coin-balance"
+          preserveValue
+        />
       </div>
     </header>
   );
