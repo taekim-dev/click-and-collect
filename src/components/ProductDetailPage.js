@@ -12,8 +12,21 @@ function ProductDetailPage() {
   const navigate = useNavigate();
 
   function handleCollectButtonClick() {
-    setCartItems([...cartItems, product]);
-    setCoinBalance(coinBalance - product.price);
+    // Check if the item already exists in the cart
+    const itemExists = cartItems.some((item) => item.id === product.id);
+
+    if (itemExists) {
+      alert("Item already in the cart");
+    } else {
+      const newCoinBalance = coinBalance - product.price;
+
+      if (newCoinBalance >= 0) {
+        setCartItems([...cartItems, product]);
+        setCoinBalance(newCoinBalance);
+      } else {
+        alert("Not enough coins for this item!");
+      }
+    }
   }
 
   function handleBackButtonClick() {
@@ -28,7 +41,6 @@ function ProductDetailPage() {
     return stars;
   }
   
-
   return (
     <div className="product-detail-page">
       <Header />
@@ -42,7 +54,7 @@ function ProductDetailPage() {
               <img src={product.image} alt={product.title} className="product-image" />
             </div>
             <div className="product-info">
-            <div className="ratings">{generateStars(product.rating)}</div>
+              <div className="ratings">{generateStars(product.rating)}</div>
               <h2 className="product-title">{product.title}</h2>
               <div className="product-price">
                 <img src={coinIcon} alt="Coin" className="coin-icon" />
@@ -53,9 +65,9 @@ function ProductDetailPage() {
                 className={`collect-button${product.instock ? '' : ' disabled'}`}
                 onClick={handleCollectButtonClick}
                 disabled={!product.instock}
-                >
+              >
                 {product.instock ? 'COLLECT' : 'Out of Stock'}
-                </button>
+              </button>
             </div>
           </div>
         </div>

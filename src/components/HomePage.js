@@ -64,14 +64,26 @@ function HomePage() {
 
   function handleCollectButtonClick(e, product) {
     e.stopPropagation();
-    console.log(`Product ${product.id} added to cart`);
-
-    setCartItems([...cartItems, product]);
-    setCoinBalance(coinBalance - product.price);
+  
+    // Check if the item already exists in the cart
+    const itemExists = cartItems.some((item) => item.id === product.id);
+  
+    if (itemExists) {
+      alert("Item already in the cart");
+    } else {
+      const newCoinBalance = coinBalance - product.price;
+  
+      if (newCoinBalance >= 0) {
+        setCartItems([...cartItems, product]);
+        setCoinBalance(newCoinBalance);
+      } else {
+        alert("Not enough coins for this item!");
+      }
+    }
   }
+  
 
   function handleCardClick(product) {
-    console.log(`Navigating to product detail page for Product ${product.id}`);
   
     localStorage.setItem("filterState", JSON.stringify({ selectedCategory, activeButton, ratingRange }));
   
