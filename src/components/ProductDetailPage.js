@@ -12,7 +12,7 @@ function ProductDetailPage() {
   const navigate = useNavigate();
 
   function handleCollectButtonClick() {
-    // Check if the item already exists in the cart
+
     const itemExists = cartItems.some((item) => item.id === product.id);
 
     if (itemExists) {

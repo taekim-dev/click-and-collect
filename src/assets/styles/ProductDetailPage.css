@@ -39,6 +39,8 @@
   .product-detail-page .product-detail-page-wrapper .product-image-container {
     flex: 1;
     border: 1px solid black;
+    height: 32rem;
+    max-width: 35rem;
   }
   
   .product-detail-page .product-detail-page-wrapper .product-image {
@@ -62,6 +64,7 @@
   .product-detail-page .product-detail-page-wrapper .product-title {
     font-size: 40px;
     font-weight: bold;
+    text-align: center;
     margin: 20px 0;
   }
   
@@ -73,14 +76,15 @@
   }
   
   .product-detail-page .product-detail-page-wrapper .coin-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 5px;
   }
   
   .product-detail-page .product-detail-page-wrapper .product-description {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 20px;
+    text-align: center;
   }
   
   .product-detail-page .product-detail-page-wrapper .collect-button {
@@ -96,12 +100,12 @@
   }
   
   .product-detail-page .product-detail-page-wrapper .collect-button:hover {
-    background-color: rgba(103, 99, 99, 0.35);
+    background-color: rgba(150, 146, 116, 0.35);
   }
   
   .product-detail-page .product-detail-page-wrapper .collect-button:active {
-    transform: translateY(2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
   
   .collect-button.disabled {

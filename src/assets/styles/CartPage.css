@@ -5,6 +5,24 @@
     
   }
   
+  .cart-page .cart-page-wrapper .empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+  }
+  
+  .cart-page .cart-page-wrapper .empty-cart-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .cart-page .cart-page-wrapper .empty-cart-message {
+    font-size: 30px;
+  }
+
   .cart-page .cart-page-wrapper .cart-container {
     display: flex;
     justify-content: center;
@@ -14,7 +32,7 @@
   }
   
   .cart-page .cart-page-wrapper .left-pane {
-    width: 55%; 
+    width: 50%; 
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -24,14 +42,16 @@
   }
   
   .cart-page .cart-page-wrapper .right-pane {
-    width: 20%; 
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-left: 5%; 
+    margin-left: 5%;
     border: 1px dashed black;
-    padding: 20px;
+    padding: 40px;
+    height: 250px; 
+    overflow-y: auto; 
   }
   
   
@@ -68,8 +88,8 @@
   }
   
   .cart-page .cart-page-wrapper .coin-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 5px;
   }
   
@@ -79,10 +99,22 @@
     border: none;
     cursor: pointer;
     flex: 1;
+    width: 30px; 
+    height: 30px; 
+    line-height: 30px; 
+  }
+
+  .cart-page .cart-page-wrapper .remove-button:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .cart-page .cart-page-wrapper .remove-button:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
   }
   
   .cart-page .cart-page-wrapper .number {
-    color: blue;
+    font: Arial, sans-serif;
+    color: rgb(255, 0, 0);
   }
   
   .cart-page .cart-page-wrapper .items-count {
@@ -96,12 +128,13 @@
   .cart-page .cart-page-wrapper .total-price {
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 40px;
   }
   
   .cart-page .cart-page-wrapper .pay-button {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
+    width: 150px;
     background-color: transparent;
     border: 2px solid black;
     border-radius: 5px;
@@ -111,10 +144,11 @@
   }
   
   .cart-page .cart-page-wrapper .pay-button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(186, 255, 176, 0.683);
   }
   
   .cart-page .cart-page-wrapper .pay-button:active {
-    transform: translateY(2px);
+    transform: translateY(3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
   
