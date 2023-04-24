@@ -1,14 +1,12 @@
 /* General */
 .home-page {
-    display: flex;
-    flex-direction: column;
     background-color: white;
   }
 
   /* Left Pane */
   .home-page .left-pane {
     margin-left: 5%;
-    margin-right: 3%;
+    margin-right: 2%;
     width: 20%;
   }
   
@@ -309,6 +307,7 @@
   .home-page .card:hover {
     outline: 3px solid #333;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
   }
 
   .home-page .card .product-image {

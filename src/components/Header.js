@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, memo } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Header.css';
 import logo from '../assets/images/logo.png';
@@ -37,7 +37,7 @@ function Header() {
         onClick={handleLogoClick}
       />
       <div className="header-info">
-        <span className="username">{username}</span>
+        {/* <span className="username">{username}</span> */}
         <img
           src={cartItems.length > 0 ? cartIcon2 : cartIcon}
           alt="Cart"
@@ -58,4 +58,4 @@ function Header() {
   );
 }
 
-export default memo(Header);
+export default Header;
