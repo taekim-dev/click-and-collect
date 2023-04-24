@@ -246,21 +246,25 @@ function HomePage() {
                 </button>
           </div>
           <div className="cards-container">
-          {filteredProducts 
-              .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
-              .map((product, index) => (
+          {filteredProducts
+            .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
+            .map((product, index) => (
                 <div
-                  key={index}
-                  className="card"
-                  onClick={() => handleCardClick(product)}
+                key={index}
+                className="card"
+                onClick={() => handleCardClick(product)}
                 >
                 <img src={product.image} alt={product.title} className="product-image" />
-                <button
+                {product.instock ? (
+                    <button
                     className="collect-button"
                     onClick={(e) => handleCollectButtonClick(e, product)}
-                >
+                    >
                     COLLECT
-                </button>
+                    </button>
+                ) : (
+                    <div className="out-of-stock">Out of stock</div>
+                )}
                 </div>
             ))}
             </div>

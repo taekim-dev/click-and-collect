@@ -49,9 +49,13 @@ function ProductDetailPage() {
                 <span>{product.price}</span>
               </div>
               <p className="product-description">{product.description}</p>
-              <button className="collect-button" onClick={handleCollectButtonClick}>
-                COLLECT
-              </button>
+              <button
+                className={`collect-button${product.instock ? '' : ' disabled'}`}
+                onClick={handleCollectButtonClick}
+                disabled={!product.instock}
+                >
+                {product.instock ? 'COLLECT' : 'Out of Stock'}
+                </button>
             </div>
           </div>
         </div>
