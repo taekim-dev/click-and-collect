@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Header.css';
 import logo from '../assets/images/logo.png';
@@ -58,4 +58,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default memo(Header);
