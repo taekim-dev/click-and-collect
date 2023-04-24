@@ -119,15 +119,23 @@ function HomePage() {
         });
       }
     
-      /*
-      function handleMaxPriceChange(e) {
-        if (e.target.value < minPrice) {
-          setMaxPrice(minPrice);
+      function handleMinPriceChange(e) {
+        const newMinPrice = parseInt(e.target.value, 10);
+        if (newMinPrice > maxPrice) {
+          setMinPrice(maxPrice);
         } else {
-          setMaxPrice(e.target.value);
+          setMinPrice(newMinPrice);
         }
       }
-      */
+    
+      function handleMaxPriceChange(e) {
+        const newMaxPrice = parseInt(e.target.value, 10);
+        if (newMaxPrice < minPrice) {
+          setMaxPrice(minPrice);
+        } else {
+          setMaxPrice(newMaxPrice);
+        }
+      }
     
       function handleDiscountFilterChange(e) {
         setDiscountFilter(e.target.checked);
@@ -177,15 +185,15 @@ function HomePage() {
                 max="20"
                 value={minPrice}
                 className="min-price-input"
-                onChange={(e) => setMinPrice(e.target.value)}
+                onChange={handleMinPriceChange}
                 />
                 <input
                 type="range"
                 min="0"
-                max="20"
+                max={maxPrice}
                 value={minPrice}
                 className="price-range"
-                onChange={(e) => setMinPrice(e.target.value)}
+                onChange={handleMinPriceChange}
                 />
                 <input
                 type="number"
@@ -193,7 +201,7 @@ function HomePage() {
                 max="20"
                 value={maxPrice}
                 className="max-price-input"
-                onChange={(e) => setMaxPrice(e.target.value)}
+                onChange={handleMaxPriceChange}
             />
 
           </div>
