@@ -52,7 +52,7 @@ function PaymentPage() {
             <span>{totalCoinsSpent}</span>
           </div>
           <button
-            className="action-button"
+            className="order-button"
             onClick={isOrderCompleted ? handleShopAgainClick : handleOrderClick}
             disabled={isCartEmpty}
           >

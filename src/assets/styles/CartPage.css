@@ -77,7 +77,6 @@
   .cart-page .cart-page-wrapper .product-title {
     font-size: 30px;
     flex: 3;
-    cursor: pointer;
   }
   
   .cart-page .cart-page-wrapper .product-price {
@@ -96,7 +95,7 @@
   .cart-page .cart-page-wrapper .remove-button {
     font-size: 30px;
     background-color: transparent;
-    border: none;
+    border: 1px;
     cursor: pointer;
     flex: 1;
     width: 30px; 
