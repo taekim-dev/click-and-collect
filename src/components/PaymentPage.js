@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import CountUp from 'react-countup';
 import Header from './Header';
 import '../assets/styles/PaymentPage.css';
 import { INITIAL_COIN_BALANCE } from '../context/AppContext';
@@ -9,12 +10,20 @@ import coinIcon from '../assets/images/coin-icon.png';
 function PaymentPage() {
   const { username, cartItems, setCartItems, setCoinBalance } = useContext(AppContext);
   const [isOrderCompleted, setIsOrderCompleted] = useState(false);
+  const [startCountUp, setStartCountUp] = useState(false);
+  const [displayedCoins, setDisplayedCoins] = useState(0);
   const navigate = useNavigate();
 
   const totalCoinsSpent = cartItems.reduce((total, item) => total + item.price, 0);
 
+  useEffect(() => {
+    setDisplayedCoins(totalCoinsSpent);
+  }, [totalCoinsSpent]);
+
   function handleOrderClick() {
     setIsOrderCompleted(true);
+    setStartCountUp(true);
+    setDisplayedCoins(0);
   }
 
   function handleShopAgainClick() {
@@ -29,8 +38,6 @@ function PaymentPage() {
 
   const isCartEmpty = cartItems.length === 0;
   const firstItemName = !isCartEmpty ? cartItems[0].title : '';
-  console.log(firstItemName);
-  console.log(cartItems);
 
   return (
     <div className="payment-page">
@@ -49,7 +56,16 @@ function PaymentPage() {
           </p>
           <div className="total-coins">
             <img src={coinIcon} alt="Coin" className="coin-icon" />
-            <span>{totalCoinsSpent}</span>
+            {startCountUp ? (
+              <CountUp
+                start={totalCoinsSpent}
+                end={displayedCoins}
+                duration={1.5}
+                onEnd={() => setStartCountUp(false)}
+              />
+            ) : (
+              <span>{displayedCoins}</span>
+            )}
           </div>
           <button
             className="order-button"
