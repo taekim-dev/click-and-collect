@@ -7,21 +7,24 @@ import AppContext from '../context/AppContext';
 import { INITIAL_COIN_BALANCE } from '../context/AppContext';
 
 function LandingPage() {
-  const { setUsername, coinBalance, setCartItems, setCoinBalance } = useContext(AppContext);
+  const { setUsername, setCoinBalance, setCartItems } = useContext(AppContext);
   const navigate = useNavigate();
 
   const [inputValue, setInputValue] = useState('');
 
+  // Reset states when the LandingPage is loaded
   useEffect(() => {
     setUsername('');
     setCoinBalance(INITIAL_COIN_BALANCE);
     setCartItems([]);
   }, [setUsername, setCoinBalance, setCartItems]);
 
+  // Update the inputValue when the user types
   function handleInputChange(event) {
     setInputValue(event.target.value);
   }
 
+  // Set the username and navigate to the home page when the form is submitted
   function handleSubmit(event) {
     event.preventDefault();
     setUsername(inputValue);
@@ -48,7 +51,7 @@ function LandingPage() {
       </div>
       <div className="coin-info">
         <img src={coinIcon} alt="Coin" className="coin-icon" />
-        <span className="coin-text">x{coinBalance}</span>
+        <span className="coin-text">x{INITIAL_COIN_BALANCE}</span>
       </div>
     </div>
   );
