@@ -1,25 +1,28 @@
 import React, { useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Header from './Header';
 import '../assets/styles/ProductDetailPage.css';
 import coinIcon from '../assets/images/coin-icon.png';
 import AppContext from '../context/AppContext';
 
 function ProductDetailPage() {
+  // Destructure the required values from AppContext
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
   const location = useLocation();
   const product = location.state.product;
   const navigate = useNavigate();
 
+  // Function to handle the collect button click
   function handleCollectButtonClick() {
-
+    // Check if the item already exists in the cart
     const itemExists = cartItems.some((item) => item.id === product.id);
 
     if (itemExists) {
       alert("Item already in the cart");
     } else {
+      // Calculate the new coin balance after adding the product to the cart
       const newCoinBalance = coinBalance - product.price;
 
+      // Check if the user has enough coins to purchase the product
       if (newCoinBalance >= 0) {
         setCartItems([...cartItems, product]);
         setCoinBalance(newCoinBalance);
@@ -29,10 +32,12 @@ function ProductDetailPage() {
     }
   }
 
+  // Function to handle the back button click
   function handleBackButtonClick() {
     navigate(-1);
   }
 
+  // Function to generate stars for the rating display
   function generateStars(rating) {
     let stars = '';
     for (let i = 0; i < rating; i++) {
@@ -40,10 +45,9 @@ function ProductDetailPage() {
     }
     return stars;
   }
-  
+
   return (
     <div className="product-detail-page">
-      <Header />
       <div className="product-detail-page-wrapper">
         <div className="content">
           <button className="back-button" onClick={handleBackButtonClick}>

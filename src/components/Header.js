@@ -10,20 +10,28 @@ import CountUp from 'react-countup';
 import { usePrevious } from 'react-use';
 
 function Header() {
+  // Get the required values and functions from AppContext
   const { cartItems, coinBalance, username, setUsername } = useContext(AppContext);
+
+  // Initialize navigation functionality
   const navigate = useNavigate();
+
+  // Get the previous coin balance using the usePrevious custom hook from react-use
   const prevCoinBalance = usePrevious(coinBalance);
 
+  // Set the username to 'Guest' if it's not already set
   useEffect(() => {
     if (!username) {
       setUsername('Guest');
     }
   }, [username, setUsername]);
 
+  // Navigate to the cart page when the cart icon is clicked
   function handleCartIconClick() {
     navigate('/cart');
   }
 
+  // Navigate to the home page when the logo is clicked
   function handleLogoClick() {
     navigate('/home');
   }
@@ -37,7 +45,7 @@ function Header() {
         onClick={handleLogoClick}
       />
       <div className="header-info">
-        {/* <span className="username">{username}</span> */}
+        <span className="username">{username}</span>
         <img
           src={cartItems.length > 0 ? cartIcon2 : cartIcon}
           alt="Cart"

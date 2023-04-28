@@ -7,6 +7,16 @@ import ProductDetailPage from './components/ProductDetailPage';
 import PaymentPage from './components/PaymentPage';
 import { AppContextProvider } from './context/AppContext';
 import './assets/styles/App.css';
+import Header from './components/Header';
+
+const LayoutWrapper = ({children}) => {
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  )
+}
 
 function App() {
   return (
@@ -15,10 +25,10 @@ function App() {
         <AppContextProvider>
           <Routes>
             <Route index path="/" element={<LandingPage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="/product/:id" element={<ProductDetailPage />} />
-            <Route path="/payment" element={<PaymentPage />} />
+            <Route path="/home" element={<LayoutWrapper><HomePage /></LayoutWrapper>} />
+            <Route path="/cart" element={<LayoutWrapper><CartPage /></LayoutWrapper>} />
+            <Route path="/product/:id" element={<LayoutWrapper><ProductDetailPage /></LayoutWrapper>} />
+            <Route path="/payment" element={<LayoutWrapper><PaymentPage /></LayoutWrapper>} />
           </Routes>
         </AppContextProvider>
       </div>

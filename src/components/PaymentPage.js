@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CountUp from 'react-countup';
-import Header from './Header';
 import '../assets/styles/PaymentPage.css';
 import { INITIAL_COIN_BALANCE } from '../context/AppContext';
 import AppContext from '../context/AppContext';
@@ -20,18 +19,21 @@ function PaymentPage() {
     setDisplayedCoins(totalCoinsSpent);
   }, [totalCoinsSpent]);
 
+  // Function to handle the order button click
   function handleOrderClick() {
     setIsOrderCompleted(true);
     setStartCountUp(true);
     setDisplayedCoins(0);
   }
 
+  // Function to handle the shop again button click
   function handleShopAgainClick() {
     setCartItems([]);
     setCoinBalance(INITIAL_COIN_BALANCE);
     navigate('/home');
   }
 
+  // Function to handle the back to cart button click
   function handleBackToCartClick() {
     navigate('/cart');
   }
@@ -41,7 +43,6 @@ function PaymentPage() {
 
   return (
     <div className="payment-page">
-      <Header />
       <div className="payment-page-wrapper">
         <div className="content">
           <h1 className="ship-to">

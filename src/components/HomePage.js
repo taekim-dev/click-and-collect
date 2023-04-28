@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from './Header';
 import AppContext from '../context/AppContext';
 import '../assets/styles/HomePage.css';
 import dummyData from '../data/dummyData.json';
@@ -10,7 +9,11 @@ import coinIcon from '../assets/images/coin-icon.png';
 const ITEMS_PER_PAGE = 9;
 
 function HomePage() {
+  // Destructure context values and hooks
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
+  const navigate = useNavigate();
+
+  // State variables for HomePage component
   const [activeButton, setActiveButton] = useState('top-rated');
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -22,8 +25,7 @@ function HomePage() {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(20);
 
-  const navigate = useNavigate();
-
+  // Filter and sort products based on active filters and sorting option
   const filteredProducts = sortProducts(
     (selectedCategory === 'all'
       ? products
@@ -33,20 +35,23 @@ function HomePage() {
     .filter((product) => product.rating >= ratingRange)
     .filter((product) => !discountFilter || product.discount > 0)
     .filter((product) => !inStockFilter || product.instock)
-  );  
+  );
 
+  // Get unique categories from products list
   const getUniqueCategories = useCallback((products) => {
     const categoriesSet = new Set(products.map((product) => formatCategory(product.category)));
     const sortedCategories = Array.from(categoriesSet).sort((a, b) => a.localeCompare(b));
     return sortedCategories;
   }, []);
 
+  // Set products and categories based on dummy data
   useEffect(() => {
     const data = mapDummyJSONToProducts(dummyData.products);
     setProducts(data);
     setCategories(getUniqueCategories(data));
-  }, [getUniqueCategories]);  
-  
+  }, [getUniqueCategories]);
+
+  // Load filter state from local storage
   useEffect(() => {
     const storedFilterState = localStorage.getItem("filterState");
     if (storedFilterState) {
@@ -56,22 +61,23 @@ function HomePage() {
       setRatingRange(ratingRange || 3); 
     }
   }, []);
-  
 
+  // Handle sorting button click
   function handleButtonClick(buttonId) {
     setActiveButton(buttonId);
   }
 
+  // Add product to cart and update coin balance
   function handleCollectButtonClick(e, product) {
     e.stopPropagation();
-  
+
     const itemExists = cartItems.some((item) => item.id === product.id);
-  
+
     if (itemExists) {
       alert("Item already in the cart");
     } else {
       const newCoinBalance = coinBalance - product.price;
-  
+
       if (newCoinBalance >= 0) {
         setCartItems([...cartItems, product]);
         setCoinBalance(newCoinBalance);
@@ -80,85 +86,93 @@ function HomePage() {
       }
     }
   }
-  
 
+  // Handle product card click and navigate to the product details page
   function handleCardClick(product) {
-  
+    // Save filter state to local storage
     localStorage.setItem("filterState", JSON.stringify({ selectedCategory, activeButton, ratingRange }));
-  
+
+    // Navigate to product details page
     navigate(`/product/${product.id}`, {
       state: { product },
     });
   }
-  
 
+  // Calculate the number of pages based on the number of filtered products
   function calculateNumberOfPages() {
     return Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   }
 
+  // Format category string (capitalize the first letter)
   function formatCategory(category) {
     return category.charAt(0).toUpperCase() + category.slice(1);
   }
 
+  // Handle category dropdown change
   function handleCategoryChange(e) {
     setSelectedCategory(e.target.value);
   }
 
+  // Generate an array of page numbers
   function generatePageNumbers() {
     const numberOfPages = calculateNumberOfPages();
     const pageNumbers = [];
-  
+
     for (let i = 1; i <= numberOfPages; i++) {
       pageNumbers.push(i);
     }
-  
+
     return pageNumbers;
   }
 
-    function sortProducts(products) {
-        return products.sort((a, b) => {
-          switch (activeButton) {
-            case 'top-rated':
-              return b.rating - a.rating;
-            case 'lowest':
-              return a.price - b.price;
-            case 'highest':
-              return b.price - a.price;
-            default:
-              return 0;
-          }
-        });
+  // Sort products based on the active sorting button
+  function sortProducts(products) {
+    return products.sort((a, b) => {
+      switch (activeButton) {
+        case 'top-rated':
+          return b.rating - a.rating;
+        case 'lowest':
+          return a.price - b.price;
+        case 'highest':
+          return b.price - a.price;
+        default:
+          return 0;
       }
-    
-      function handleMinPriceChange(e) {
-        const newMinPrice = parseInt(e.target.value, 10);
-        if (newMinPrice > maxPrice) {
-          setMinPrice(maxPrice);
-        } else {
-          setMinPrice(newMinPrice);
-        }
-      }
-    
-      function handleMaxPriceChange(e) {
-        const newMaxPrice = parseInt(e.target.value, 10);
-        if (newMaxPrice < minPrice) {
-          setMaxPrice(minPrice);
-        } else {
-          setMaxPrice(newMaxPrice);
-        }
-      }
-    
-      function handleDiscountFilterChange(e) {
-        setDiscountFilter(e.target.checked);
-      }
-      
-      function handleInStockFilterChange(e) {
-        setInStockFilter(e.target.checked);
-      }      
+    });
+  }
+
+  // Handle minimum price input change
+  function handleMinPriceChange(e) {
+    const newMinPrice = parseInt(e.target.value, 10);
+    if (newMinPrice > maxPrice) {
+      setMinPrice(maxPrice);
+    } else {
+      setMinPrice(newMinPrice);
+    }
+  }
+
+  // Handle maximum price input change
+  function handleMaxPriceChange(e) {
+    const newMaxPrice = parseInt(e.target.value, 10);
+    if (newMaxPrice < minPrice) {
+      setMaxPrice(minPrice);
+    } else {
+      setMaxPrice(newMaxPrice);
+    }
+  }
+
+  // Handle discount filter checkbox change
+  function handleDiscountFilterChange(e) {
+    setDiscountFilter(e.target.checked);
+  }
+
+  // Handle in-stock filter checkbox change
+  function handleInStockFilterChange(e) {
+    setInStockFilter(e.target.checked);
+  }
     
   return (
     <div className="home-page">
-        <Header />
       <div className="panes-container">
         <div className="left-pane">
           <h2 className="category-title">Category</h2>
