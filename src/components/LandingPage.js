@@ -21,7 +21,7 @@ function LandingPage() {
     setCoinBalance(INITIAL_COIN_BALANCE);
     setCartItems([]);
   }, [setUsername, setCoinBalance, setCartItems]);
-
+ 
   // Update the inputValue when the user types
   function handleInputChange(event) {
     setInputValue(event.target.value);

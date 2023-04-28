@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 // Create a new context for the application
 const AppContext = createContext();
@@ -11,8 +11,22 @@ export const INITIAL_COIN_BALANCE = 100;
 export const AppContextProvider = ({ children }) => {
   // Define the shared states
   const [username, setUsername] = useState('');
-  const [cartItems, setCartItems] = useState([]);
-  const [coinBalance, setCoinBalance] = useState(INITIAL_COIN_BALANCE);
+  const [coinBalance, setCoinBalance] = useState(() => {
+    const storedCoinBalance = localStorage.getItem('coinBalance');
+    return storedCoinBalance ? parseInt(storedCoinBalance, 10) : INITIAL_COIN_BALANCE;
+  });
+  const [cartItems, setCartItems] = useState(() => {
+    const storedCartItems = localStorage.getItem('cartItems');
+    return storedCartItems ? JSON.parse(storedCartItems) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('coinBalance', coinBalance);
+  }, [coinBalance]);
+
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   // Create an object containing the shared state values and their setters
   const value = {

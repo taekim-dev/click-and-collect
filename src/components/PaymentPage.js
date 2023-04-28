@@ -26,7 +26,7 @@ function PaymentPage() {
         setShowConfetti(true);
         setTimeout(() => {
             setShowConfetti(false);
-        }, 5000)
+        }, 4000)
     }
   }, [isOrderCompleted])
 
