@@ -19,12 +19,11 @@ function Header() {
   // Get the previous coin balance using the usePrevious custom hook from react-use
   const prevCoinBalance = usePrevious(coinBalance);
 
-  // Set the username to 'Guest' if it's not already set
+  // Set the username to the value stored in local storage, or 'Guest' if it's not available
   useEffect(() => {
-    if (!username) {
-      setUsername('Guest');
-    }
-  }, [username, setUsername]);
+    const storedUsername = localStorage.getItem('username');
+    setUsername(storedUsername || 'Guest');
+  }, [setUsername]);
 
   // Navigate to the cart page when the cart icon is clicked
   function handleCartIconClick() {
@@ -45,7 +44,7 @@ function Header() {
         onClick={handleLogoClick}
       />
       <div className="header-info">
-        <span className="username">{username}</span>
+        <span className="username">Hello, {username}</span>
         <img
           src={cartItems.length > 0 ? cartIcon2 : cartIcon}
           alt="Cart"

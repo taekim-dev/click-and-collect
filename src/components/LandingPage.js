@@ -27,8 +27,11 @@ function LandingPage() {
   // Set the username and navigate to the home page when the form is submitted
   function handleSubmit(event) {
     event.preventDefault();
-    setUsername(inputValue);
-    navigate('/home');
+    if (inputValue.trim() !== '') {
+      setUsername(inputValue);
+      localStorage.setItem('username', inputValue);
+      navigate('/home');
+    }
   }
 
   return (
@@ -41,6 +44,7 @@ function LandingPage() {
             type="text"
             className="username-input"
             autoFocus
+            required
             value={inputValue}
             onChange={handleInputChange}
           />
