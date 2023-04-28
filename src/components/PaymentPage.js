@@ -5,12 +5,14 @@ import '../assets/styles/PaymentPage.css';
 import { INITIAL_COIN_BALANCE } from '../context/AppContext';
 import AppContext from '../context/AppContext';
 import coinIcon from '../assets/images/coin-icon.png';
+import Confetti from 'react-confetti';
 
 function PaymentPage() {
   const { username, cartItems, setCartItems, setCoinBalance } = useContext(AppContext);
   const [isOrderCompleted, setIsOrderCompleted] = useState(false);
   const [startCountUp, setStartCountUp] = useState(false);
   const [displayedCoins, setDisplayedCoins] = useState(0);
+  const [showConfetti, setShowConfetti] = useState(false);
   const navigate = useNavigate();
 
   const totalCoinsSpent = cartItems.reduce((total, item) => total + item.price, 0);
@@ -18,6 +20,15 @@ function PaymentPage() {
   useEffect(() => {
     setDisplayedCoins(totalCoinsSpent);
   }, [totalCoinsSpent]);
+
+  useEffect(() => {
+    if (isOrderCompleted){
+        setShowConfetti(true);
+        setTimeout(() => {
+            setShowConfetti(false);
+        }, 5000)
+    }
+  }, [isOrderCompleted])
 
   // Function to handle the order button click
   function handleOrderClick() {
@@ -85,6 +96,7 @@ function PaymentPage() {
           &lt;- Cart
         </button>
       )}
+      {showConfetti && <Confetti />}
     </div>
   );
 }
