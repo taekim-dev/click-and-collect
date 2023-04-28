@@ -17,8 +17,9 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    border: 2px dotted black;
+    border: 2px solid black;
     width: fit-content;
+    box-shadow: 10px 5px 5px rgb(175, 169, 169);
   }
   
   .payment-page .payment-page-wrapper .ship-to {
@@ -57,7 +58,7 @@
   }
   
   .payment-page .payment-page-wrapper .order-button:hover {
-    background-color: rgba(255, 200, 21, 0.683);
+    background-color: rgba(255, 191, 0, 0.894);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   }
   

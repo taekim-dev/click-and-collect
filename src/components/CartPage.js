@@ -61,7 +61,8 @@ function CartPage() {
           </div>
           <div className="right-pane">
             <div className="items-count">
-              <span className="number">{totalItems}</span> Items
+              <span className="number">{totalItems > 0 ? totalItems : ''}</span> 
+              {totalItems === 0 ? ' No Item' : totalItems === 1 ? ' Item' : ' Items'}
             </div>
             <div className="total-text">Total Price:</div>
             <div className="total-price">
