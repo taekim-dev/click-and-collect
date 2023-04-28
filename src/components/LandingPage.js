@@ -13,6 +13,7 @@ function LandingPage() {
 
   const [inputValue, setInputValue] = useState('');
   const [isCountingUp, setIsCountingUp] = useState(false);
+  const [animationClass, setAnimationClass] = useState('');
 
   // Reset states when the LandingPage is loaded
   useEffect(() => {
@@ -33,9 +34,14 @@ function LandingPage() {
       setUsername(inputValue);
       localStorage.setItem('username', inputValue);
       setIsCountingUp(true);
-      await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait for 2 seconds
-      navigate('/home');
     }
+  }
+
+  function handleCountUpEnd() {
+    setAnimationClass('celebrate');
+    setTimeout(() => {
+      navigate('/home');
+    }, 2000);
   }
 
   return (
@@ -57,10 +63,10 @@ function LandingPage() {
           </button>
         </form>
       </div>
-      <div className="coin-info">
+      <div className={`coin-info ${animationClass}`}>
         <img src={coinIcon} alt="Coin" className="coin-icon" />
         <span className="coin-text">
-          x{isCountingUp ? <CountUp start={0} end={INITIAL_COIN_BALANCE} duration={2} /> : 0}
+          x{isCountingUp ? <CountUp start={0} end={INITIAL_COIN_BALANCE} duration={2} onEnd={handleCountUpEnd} /> : 0}
         </span>
       </div>
     </div>

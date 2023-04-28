@@ -81,6 +81,21 @@
     font-size: 40px;
     font-family: monospace;
     font-weight: bold;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    margin-left: 0.2rem;
+  }
+  
+  .celebrate .coin-icon,
+  .celebrate .coin-text {
+    animation: celebrate 2s ease infinite;
+  }
+  
+  @keyframes celebrate {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
   }
   
