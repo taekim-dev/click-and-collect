@@ -9,8 +9,10 @@ function CartPage() {
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
   const navigate = useNavigate();
 
-  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const totalItems = cartItems.length;
   const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
 
   function handleRemoveFromCart(id) {
     const removedItem = cartItems.find((item) => item.id === id);
@@ -79,9 +81,13 @@ function CartPage() {
             )}
           </div>
           <div className="right-pane">
-            <div className="items-count">
-              <span className="number">{totalItems > 0 ? totalItems : ''}</span> 
-              {totalItems === 0 ? ' No Item' : totalItems === 1 ? ' Item' : ' Items'}
+          <div className="summary">
+                <div className="unique-items-count">
+                    Unique Items:&nbsp; <span className="number">{totalItems > 0 ? totalItems : 0}</span>
+                </div>
+                <div className="total-quantity">
+                    Total Quantity:&nbsp; <span className="number">{totalQuantity > 0 ? totalQuantity : 0}</span>
+                </div>
             </div>
             <div className="total-text">Total Price:</div>
             <div className="total-price">
