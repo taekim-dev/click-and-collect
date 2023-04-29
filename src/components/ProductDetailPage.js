@@ -70,11 +70,11 @@ function handleCollectButtonClick(e, product) {
               <p className="product-description">{product.description}</p>
               <button
                 className={`collect-button${product.instock ? '' : ' disabled'}`}
-                onClick={handleCollectButtonClick}
+                onClick={(e) => handleCollectButtonClick(e, product)}
                 disabled={!product.instock}
-              >
+                >
                 {product.instock ? 'COLLECT' : 'Out of Stock'}
-              </button>
+                </button>
             </div>
           </div>
         </div>

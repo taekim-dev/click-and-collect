@@ -15,7 +15,7 @@ function PaymentPage() {
   const [showConfetti, setShowConfetti] = useState(false);
   const navigate = useNavigate();
 
-  const totalCoinsSpent = cartItems.reduce((total, item) => total + item.price, 0);
+  const totalCoinsSpent = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   useEffect(() => {
     setDisplayedCoins(totalCoinsSpent);
