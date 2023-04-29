@@ -54,7 +54,7 @@ function CartPage() {
                     <span>{item.price}</span>
                   </div>
                   <div className="quantity-container">
-                  <span className="quantity-text">Qty:</span>
+                  <span className="quantity-text">Qty: </span>
                     <input
                     type="number"
                     min="1"
