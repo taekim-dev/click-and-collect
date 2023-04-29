@@ -9,7 +9,7 @@ export const INITIAL_COIN_BALANCE = 100;
 // AppContextProvider component wraps around other components and provides
 // the shared state (context) to them
 export const AppContextProvider = ({ children }) => {
-  // Define the shared states
+
   const [username, setUsername] = useState('');
   const [coinBalance, setCoinBalance] = useState(() => {
     const storedCoinBalance = localStorage.getItem('coinBalance');

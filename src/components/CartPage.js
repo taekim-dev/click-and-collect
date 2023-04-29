@@ -6,24 +6,35 @@ import AppContext from '../context/AppContext';
 import '../assets/styles/CartPage.css';
 
 function CartPage() {
-  // Destructure the required values from AppContext
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
   const navigate = useNavigate();
 
-  // Calculate the total number of items and their total price
-  const totalItems = cartItems.length;
-  const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-  // Function to remove an item from the cart and update the coin balance
   function handleRemoveFromCart(id) {
     const removedItem = cartItems.find((item) => item.id === id);
     setCartItems(cartItems.filter((item) => item.id !== id));
-    setCoinBalance(coinBalance + removedItem.price);
+    setCoinBalance(coinBalance + removedItem.price * removedItem.quantity);
   }
 
-  // Function to navigate to the payment page when the Pay button is clicked
   function handlePayButtonClick() {
     navigate('/payment');
+  }
+
+  function handleQuantityChange(id, newQuantity) {
+    const itemIndex = cartItems.findIndex((item) => item.id === id);
+    const updatedCartItems = [...cartItems];
+    const previousQuantity = updatedCartItems[itemIndex].quantity;
+    const priceDifference = updatedCartItems[itemIndex].price * (newQuantity - previousQuantity);
+
+    if (coinBalance - priceDifference >= 0) {
+      updatedCartItems[itemIndex].quantity = newQuantity;
+      setCartItems(updatedCartItems);
+      setCoinBalance(coinBalance - priceDifference);
+    } else {
+      alert("Not enough coins for the updated quantity!");
+    }
   }
 
   return (
@@ -32,7 +43,6 @@ function CartPage() {
         <div className="cart-container">
           <div className="left-pane">
             {totalItems > 0 ? (
-              // Display the cart items if there are any
               cartItems.map((item) => (
                 <div key={item.id} className="cart-item">
                   <div className="product-image-container">
@@ -43,6 +53,16 @@ function CartPage() {
                     <img src={coinIcon} alt="Coin" className="coin-icon" />
                     <span>{item.price}</span>
                   </div>
+                  <div className="quantity-container">
+                  <span className="quantity-text">Qty:</span>
+                    <input
+                    type="number"
+                    min="1"
+                    value={item.quantity}
+                    className="quantity-input"
+                    onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
+                    />
+                  </div>
                   <button
                     className="remove-button"
                     onClick={() => handleRemoveFromCart(item.id)}
@@ -52,7 +72,6 @@ function CartPage() {
                 </div>
               ))
             ) : (
-              // Display a message if the cart is empty
               <div className="empty-cart">
                 <img src={emptyCartIcon} alt="Empty Cart" className="empty-cart-icon" />
                 <div className="empty-cart-message">Your cart is empty</div>

@@ -370,3 +370,19 @@
     color: inherit;
     display: block;
   }
+
+  .cart-page .cart-page-wrapper .quantity-text {
+    font-size: 20px;
+    flex: 2;
+  }
+  
+  .cart-page .cart-page-wrapper .quantity-input {
+    font-size: 20px;
+    flex: 1;
+    width: 50px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  

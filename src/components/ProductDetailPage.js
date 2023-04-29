@@ -11,26 +11,29 @@ function ProductDetailPage() {
   const product = location.state.product;
   const navigate = useNavigate();
 
-  // Function to handle the collect button click
-  function handleCollectButtonClick() {
-    // Check if the item already exists in the cart
-    const itemExists = cartItems.some((item) => item.id === product.id);
-
-    if (itemExists) {
-      alert("Item already in the cart");
-    } else {
-      // Calculate the new coin balance after adding the product to the cart
-      const newCoinBalance = coinBalance - product.price;
-
-      // Check if the user has enough coins to purchase the product
-      if (newCoinBalance >= 0) {
-        setCartItems([...cartItems, product]);
-        setCoinBalance(newCoinBalance);
+// Function to handle the collect button click
+function handleCollectButtonClick(e, product) {
+    e.stopPropagation();
+  
+    const newCoinBalance = coinBalance - product.price;
+  
+    if (newCoinBalance >= 0) {
+      const itemIndex = cartItems.findIndex((item) => item.id === product.id);
+  
+      if (itemIndex !== -1) {
+        const updatedCartItems = [...cartItems];
+        updatedCartItems[itemIndex].quantity += 1;
+        setCartItems(updatedCartItems);
       } else {
-        alert("Not enough coins for this item!");
+        setCartItems([...cartItems, { ...product, quantity: 1 }]);
       }
+  
+      setCoinBalance(newCoinBalance);
+    } else {
+      alert("Not enough coins for this item!");
     }
   }
+  
 
   // Function to handle the back button click
   function handleBackButtonClick() {

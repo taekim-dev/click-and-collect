@@ -70,22 +70,26 @@ function HomePage() {
   // Add product to cart and update coin balance
   function handleCollectButtonClick(e, product) {
     e.stopPropagation();
-
-    const itemExists = cartItems.some((item) => item.id === product.id);
-
-    if (itemExists) {
-      alert("Item already in the cart");
-    } else {
-      const newCoinBalance = coinBalance - product.price;
-
-      if (newCoinBalance >= 0) {
-        setCartItems([...cartItems, product]);
-        setCoinBalance(newCoinBalance);
+  
+    const newCoinBalance = coinBalance - product.price;
+  
+    if (newCoinBalance >= 0) {
+      const itemIndex = cartItems.findIndex((item) => item.id === product.id);
+  
+      if (itemIndex !== -1) {
+        const updatedCartItems = [...cartItems];
+        updatedCartItems[itemIndex].quantity += 1;
+        setCartItems(updatedCartItems);
       } else {
-        alert("Not enough coins for this item!");
+        setCartItems([...cartItems, { ...product, quantity: 1 }]);
       }
+  
+      setCoinBalance(newCoinBalance);
+    } else {
+      alert("Not enough coins for this item!");
     }
   }
+
 
   // Handle product card click and navigate to the product details page
   function handleCardClick(product) {
