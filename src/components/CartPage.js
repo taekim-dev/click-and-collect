@@ -4,6 +4,7 @@ import coinIcon from '../assets/images/coin-icon.png';
 import emptyCartIcon from '../assets/images/empty-cart-icon.png';
 import AppContext from '../context/AppContext';
 import '../assets/styles/CartPage.css';
+import Breadcrumbs from './Breadcrumbs';
 
 function CartPage() {
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
@@ -41,6 +42,12 @@ function CartPage() {
 
   return (
     <div className="cart-page">
+        <Breadcrumbs
+            items={[
+                { label: 'Home', path: '/home' },
+                { label: 'Cart', path: '/cart' },
+            ]}
+        />
       <div className="cart-page-wrapper">
         <div className="cart-container">
           <div className="left-pane">

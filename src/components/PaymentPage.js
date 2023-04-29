@@ -6,6 +6,7 @@ import { INITIAL_COIN_BALANCE } from '../context/AppContext';
 import AppContext from '../context/AppContext';
 import coinIcon from '../assets/images/coin-icon.png';
 import Confetti from 'react-confetti';
+import Breadcrumbs from './Breadcrumbs';
 
 function PaymentPage() {
   const { username, cartItems, setCartItems, setCoinBalance } = useContext(AppContext);
@@ -44,16 +45,18 @@ function PaymentPage() {
     navigate('/home');
   }
 
-  // Function to handle the back to cart button click
-  function handleBackToCartClick() {
-    navigate('/cart');
-  }
-
   const isCartEmpty = cartItems.length === 0;
   const firstItemName = !isCartEmpty ? cartItems[0].title : '';
 
   return (
     <div className="payment-page">
+        <Breadcrumbs
+            items={[
+                { label: 'Home', path: '/home' },
+                { label: 'Cart', path: '/cart' },
+                { label: 'Payment', path: '/payment' },
+            ]}
+        />
       <div className="payment-page-wrapper">
         <div className="content">
           <h1 className="ship-to">
@@ -88,14 +91,6 @@ function PaymentPage() {
           </button>
         </div>
       </div>
-      {!isOrderCompleted && (
-        <button
-          className="cart-button"
-          onClick={handleBackToCartClick}
-        >
-          &lt;- Cart
-        </button>
-      )}
       {showConfetti && <Confetti />}
     </div>
   );

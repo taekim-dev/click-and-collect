@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import '../assets/styles/ProductDetailPage.css';
 import coinIcon from '../assets/images/coin-icon.png';
 import AppContext from '../context/AppContext';
+import Breadcrumbs from './Breadcrumbs';
 
 function ProductDetailPage() {
   // Destructure the required values from AppContext
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
   const location = useLocation();
   const product = location.state.product;
-  const navigate = useNavigate();
 
 // Function to handle the collect button click
 function handleCollectButtonClick(e, product) {
@@ -33,12 +33,6 @@ function handleCollectButtonClick(e, product) {
       alert("Not enough coins for this item!");
     }
   }
-  
-
-  // Function to handle the back button click
-  function handleBackButtonClick() {
-    navigate(-1);
-  }
 
   // Function to generate stars for the rating display
   function generateStars(rating) {
@@ -51,11 +45,14 @@ function handleCollectButtonClick(e, product) {
 
   return (
     <div className="product-detail-page">
+        <Breadcrumbs
+            items={[
+                { label: 'Home', path: '/home' },
+                { label: product.category, path: `/category/${product.category}` },
+            ]}
+        />
       <div className="product-detail-page-wrapper">
         <div className="content">
-          <button className="back-button" onClick={handleBackButtonClick}>
-            &lt;- Back
-          </button>
           <div className="product-detail">
             <div className="product-image-container">
               <img src={product.image} alt={product.title} className="product-image" />
