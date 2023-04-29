@@ -48,7 +48,8 @@ function handleCollectButtonClick(e, product) {
         <Breadcrumbs
             items={[
                 { label: 'Home', path: '/home' },
-                { label: product.category, path: `/category/${product.category}` },
+                { label: 'Product' },
+                //{ label: product.category, path: `/category/${product.category}` },
             ]}
         />
       <div className="product-detail-page-wrapper">

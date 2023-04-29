@@ -45,7 +45,7 @@ function CartPage() {
         <Breadcrumbs
             items={[
                 { label: 'Home', path: '/home' },
-                { label: 'Cart', path: '/cart' },
+                { label: 'Cart'},
             ]}
         />
       <div className="cart-page-wrapper">

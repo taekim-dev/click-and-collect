@@ -54,7 +54,7 @@ function PaymentPage() {
             items={[
                 { label: 'Home', path: '/home' },
                 { label: 'Cart', path: '/cart' },
-                { label: 'Payment', path: '/payment' },
+                { label: 'Payment'},
             ]}
         />
       <div className="payment-page-wrapper">

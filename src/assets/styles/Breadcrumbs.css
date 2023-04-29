@@ -8,16 +8,21 @@
     margin-top: 10px;
   }
   
-  .breadcrumbs .separator {
+  .breadcrumbs .breadcrumb-separator {
     margin: 0 8px;
   }
   
-  .breadcrumbs a {
+  .breadcrumbs .breadcrumb-item {
     text-decoration: none;
     color: #000000;
+    cursor: pointer;
   }
   
-  .breadcrumbs a:hover {
+  .breadcrumbs .breadcrumb-item:not(.clickable) {
+    cursor: default;
+  }
+  
+  .breadcrumbs .breadcrumb-item.clickable:hover {
     text-decoration: underline;
   }
   
