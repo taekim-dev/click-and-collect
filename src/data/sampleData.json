@@ -1,0 +1,1517 @@
+{
+    "products": [
+      {
+        "id": 20,
+        "title": "Yellow T-shirts",
+        "description": "Comfortable cotton T-shirts for women",
+        "price": 9,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 20,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/20.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/20.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/20-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/20-2.jpg"
+        ]
+      },
+      {
+        "id": 98,
+        "title": "Fordable Bike",
+        "description": "This foldable bike is perfect for commuters or anyone with limited storage space. The bike features a lightweight aluminum frame and can be easily folded for storage. It also comes with a comfortable seat and adjustable handlebars for a custom fit.",
+        "price": 20,
+        "discountPercentage": 10,
+        "rating": 5,
+        "stock": 10,
+        "brand": "BikeTech",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/98.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/98.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/98-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/98-2.jpg"
+        ]
+      },
+      {
+        "id": 61,
+        "title": "Yellow Bath Towels",
+        "description": "Soft and fluffy yellow bath towels",
+        "price": 5,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 20,
+        "brand": "HomeGoods",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/61.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/61.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/61-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/61-2.jpg"
+        ]
+      },
+      {
+        "id": 36,
+        "title": "Color Shirts Set",
+        "description": "Set of colorful shirts for men",
+        "price": 10,
+        "discountPercentage": 20,
+        "rating": 4,
+        "stock": 10,
+        "brand": "Fashionista",
+        "category": "Men's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/36.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/36.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/36-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/36-2.jpg"
+        ]
+      },
+      {
+        "id": 41,
+        "title": "Luxury Watch",
+        "description": "Luxurious watch for men",
+        "price": 20,
+        "discountPercentage": 20,
+        "rating": 5,
+        "stock": 8,
+        "brand": "Fashionista",
+        "category": "Men's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/41.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/41.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/41-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/41-2.jpg"
+        ]
+      },
+      {
+        "id": 16,
+        "title": "E-brook Reader",
+        "description": "Electronic book reader with high-resolution display",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 3,
+        "stock": 5,
+        "brand": "BookTech",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/16.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/16.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/16-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/16-2.jpg"
+        ]
+      },
+      {
+        "id": 57,
+        "title": "Doll Clothes",
+        "description": "Clothes for dolls",
+        "price": 9,
+        "discountPercentage": 5,
+        "rating": 4,
+        "stock": 7,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/57.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/57.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/57-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/57-2.jpg"
+        ]
+      },
+      {
+        "id": 94,
+        "title": "Leather Baseball Glove",
+        "description": "This high-quality baseball glove is made from genuine leather and is perfect for players of all levels. It is designed to fit comfortably on your hand and provide excellent grip and control on the ball.",
+        "price": 15,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 25,
+        "brand": "Pro Gear",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/94.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/94.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/94-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/94-2.jpg"
+        ]
+      },
+      {
+        "id": 82,
+        "title": "Black Sports Bra",
+        "description": "A comfortable and supportive sports bra for women. Made from a moisture-wicking fabric that keeps you cool and dry during your workout. Available in multiple sizes.",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 40,
+        "brand": "Fit & Firm",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/82.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/82.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/82-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/82-2.jpg"
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Wireless Keyboard",
+        "description": "Sleek wireless keyboard for easy typing",
+        "price": 5,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 12,
+        "brand": "TechZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/6.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/6.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/6-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/6-2.jpg"
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Slim Laptop",
+        "description": "Ultra-thin laptop with long battery life",
+        "price": 15,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 0,
+        "brand": "TechZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/7.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/7.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/7-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/7-2.jpg"
+        ]
+      },
+      {
+        "id": 83,
+        "title": "Pink Sports Bra",
+        "description": "This comfortable sports bra is perfect for any activity. It features moisture-wicking fabric to keep you cool and dry, and a supportive design that keeps everything in place.",
+        "price": 18,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 20,
+        "brand": "Fit & Strong",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/83.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/83.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/83-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/83-2.jpg"
+        ]
+      },
+      {
+        "id": 95,
+        "title": "Small Baseball",
+        "description": "This small baseball is perfect for young players just starting out. It is made from high-quality materials and is designed to provide a great feel and grip. It is also easy to catch and throw, making it ideal for developing basic skills.",
+        "price": 5,
+        "discountPercentage": 0,
+        "rating": 3,
+        "stock": 50,
+        "brand": "Pro Gear",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/95.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/95.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/95-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/95-2.jpg"
+        ]
+      },
+      {
+        "id": 56,
+        "title": "Puzzle Game Toy",
+        "description": "Puzzle game toy for kids",
+        "price": 7,
+        "discountPercentage": 0,
+        "rating": 3,
+        "stock": 18,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/56.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/56.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/56-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/56-2.jpg"
+        ]
+      },
+      {
+        "id": 17,
+        "title": "Classic TV",
+        "description": "Vintage television set with modern features",
+        "price": 20,
+        "discountPercentage": 10,
+        "rating": 4,
+        "stock": 12,
+        "brand": "RetroTech",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/17.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/17.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/17-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/17-2.jpg"
+        ]
+      },
+      {
+        "id": 40,
+        "title": "Classic Metal Watch",
+        "description": "Classic metal watch for men",
+        "price": 15,
+        "discountPercentage": 10,
+        "rating": 4,
+        "stock": 0,
+        "brand": "Fashionista",
+        "category": "Men's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/40.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/40.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/40-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/40-2.jpg"
+        ]
+      },
+      {
+        "id": 37,
+        "title": "Brown Leather Wallet",
+        "description": "Stylish leather wallet for men",
+        "price": 15,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 15,
+        "brand": "Fashionista",
+        "category": "Men's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/37.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/37.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/37-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/37-2.jpg"
+        ]
+      },
+      {
+        "id": 99,
+        "title": "Heavy Weights Set",
+        "description": "This set of heavy weights is perfect for anyone looking to build strength and muscle. The set includes two dumbbells, each weighing 10 pounds. The weights are coated in a durable white finish to prevent rust and wear. The comfortable grips make it easy to hold the weights during your workout.",
+        "price": 20,
+        "discountPercentage": 0,
+        "rating": 3,
+        "stock": 15,
+        "brand": "StrengthMaster",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/99.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/99.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/99-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/99-2.jpg"
+        ]
+      },
+      {
+        "id": 76,
+        "title": "Dust Brush",
+        "description": "A high-quality dust brush that is perfect for cleaning your home or office. This brush has soft bristles that will not scratch surfaces and is easy to use.",
+        "price": 12,
+        "discountPercentage": 10,
+        "rating": 4,
+        "stock": 20,
+        "brand": "Clean Sweep",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/76.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/76.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/76-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/76-2.jpg"
+        ]
+      },
+      {
+        "id": 21,
+        "title": "Pink Dress",
+        "description": "Stylish pink dress for women",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 10,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/21.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/21.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/21-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/21-2.jpg"
+        ]
+      },
+      {
+        "id": 47,
+        "title": "Red Bear Doll",
+        "description": "Soft and cuddly red bear doll",
+        "price": 12,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 10,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/47.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/47.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/47-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/47-2.jpg"
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Red Cellphone",
+        "description": "Stylish red smartphone with great features",
+        "price": 9,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 15,
+        "brand": "TechZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/10.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/10.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/10-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/10-2.jpg"
+        ]
+      },
+      {
+        "id": 51,
+        "title": "Lego Block Toy",
+        "description": "Lego block toy for kids",
+        "price": 15,
+        "discountPercentage": 10,
+        "rating": 5,
+        "stock": 5,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/51.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/51.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/51-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/51-2.jpg"
+        ]
+      },
+      {
+        "id": 92,
+        "title": "Classic Basketball",
+        "description": "This is a classic basketball made from high-quality materials that is perfect for playing with friends or in a league. It features a classic design with orange panels and black stripes, and is built to last.",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 15,
+        "brand": "SportCo",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/92.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/92.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/92-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/92-2.jpg"
+        ]
+      },
+      {
+        "id": 84,
+        "title": "Gym Cloth Pants",
+        "description": "These gym pants are perfect for any workout. They are made from breathable fabric that keeps you cool and comfortable, and they have a tapered fit that looks great on any body type.",
+        "price": 25,
+        "discountPercentage": 15,
+        "rating": 4,
+        "stock": 15,
+        "brand": "Active Wear",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/84.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/84.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/84-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/84-2.jpg"
+        ]
+      },
+      {
+        "id": 26,
+        "title": "Simple Backpack",
+        "description": "Stylish backpack for women",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 18,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/26.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/26.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/26-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/26-2.jpg"
+        ]
+      },
+      {
+        "id": 71,
+        "title": "Simple Wall Hook",
+        "description": "Minimalist wall hook made of high-quality stainless steel for durability and strength. Suitable for hanging coats, hats, towels, or other small items. Easy to install with included screws and anchors.",
+        "price": 5,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 100,
+        "brand": "IKEA",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/71.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/71.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/72.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/73.jpg"
+        ]
+      },
+      {
+        "id": 88,
+        "title": "Black Exercise Socks",
+        "description": "These socks are designed for intense workouts, with a breathable and moisture-wicking material that keeps your feet dry and comfortable. The reinforced arch and heel provide extra support and cushioning.",
+        "price": 5,
+        "discountPercentage": 0,
+        "rating": 3,
+        "stock": 25,
+        "brand": "Sporty Feet",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/88.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/88.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/88-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/88-2.jpg"
+        ]
+      },
+      {
+        "id": 67,
+        "title": "Disinfect Wipes",
+        "description": "A pack of 50 disinfectant wipes that kill 99.9% of viruses and bacteria. Perfect for cleaning and disinfecting surfaces around the house.",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 0,
+        "brand": "Lysol",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/67.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/67.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/67-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/67-2.jpg"
+        ]
+      },
+      {
+        "id": 30,
+        "title": "Color Socks Gift Set",
+        "description": "Colorful socks gift set for women",
+        "price": 15,
+        "discountPercentage": 10,
+        "rating": 5,
+        "stock": 10,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/30.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/30.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/30-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/30-2.jpg"
+        ]
+      },
+      {
+        "id": 31,
+        "title": "Simple Female Dress",
+        "description": "Plain dress for women",
+        "price": 18,
+        "discountPercentage": 15,
+        "rating": 4,
+        "stock": 15,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/31.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/31.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/31-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/31-2.jpg"
+        ]
+      },
+      {
+        "id": 89,
+        "title": "White Exercise Socks",
+        "description": "Comfortable and durable socks designed for intense workouts. Made with moisture-wicking fabric that keeps your feet cool and dry. The high-quality material ensures that the socks will not tear or wear out quickly.",
+        "price": 7,
+        "discountPercentage": 15,
+        "rating": 5,
+        "stock": 50,
+        "brand": "Fit & Strong",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/89.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/89.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/89-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/89-2.jpg"
+        ]
+      },
+      {
+        "id": 66,
+        "title": "Colorful Wash Clothes",
+        "description": "A set of 10 wash clothes in different colors that are perfect for daily use. Made from soft and durable materials.",
+        "price": 9,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 25,
+        "brand": "Generic",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/66.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/66.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/66-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/66-2.jpg"
+        ]
+      },
+      {
+        "id": 70,
+        "title": "Yellow Floor Mop",
+        "description": "Efficient and durable yellow floor mop with an ergonomic handle for comfortable cleaning. The mop head is made of microfiber material that effectively traps dirt and dust for a clean and shiny floor. Suitable for both dry and wet cleaning.",
+        "price": 12,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 50,
+        "brand": "Swiffer",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/70.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/70.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/70-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/70-2.jpg.jpg"
+        ]
+      },
+      {
+        "id": 27,
+        "title": "Pink Metal Watch",
+        "description": "Stylish metal watch for women",
+        "price": 18,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 6,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/27.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/27.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/27-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/27-2.jpg"
+        ]
+      },
+      {
+        "id": 1,
+        "title": "Wooden Radio",
+        "description": "Vintage-style wooden radio with modern features",
+        "price": 15,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 10,
+        "brand": "TechZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/1.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/1-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/1-2.jpg"
+        ]
+      },
+      {
+        "id": 85,
+        "title": "Dark Sports Watch",
+        "description": "This durable sports watch is perfect for any activity. It features a sleek design and a comfortable strap, and it has all the features you need to track your workouts and stay on top of your fitness goals.",
+        "price": 10,
+        "discountPercentage": 20,
+        "rating": 4,
+        "stock": 0,
+        "brand": "SportTech",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/85.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/85.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/85-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/85-2.jpg"
+        ]
+      },
+      {
+        "id": 93,
+        "title": "4 Tennis Balls Set",
+        "description": "This set includes four high-quality tennis balls that are perfect for practicing your serve or playing a game with friends. The balls are made from durable materials and are built to last.",
+        "price": 12,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 25,
+        "brand": "SportCo",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/93.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/93.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/93-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/93-2.jpg"
+        ]
+      },
+      {
+        "id": 50,
+        "title": "Color Block Toy",
+        "description": "Colorful block toy for kids",
+        "price": 8,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 15,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/50.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/50.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/50-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/50-2.jpg"
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Blue Cellphone",
+        "description": "Stylish blue smartphone with great features",
+        "price": 14,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 0,
+        "brand": "TechZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/11.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/11.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/11-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/11-2.jpg"
+        ]
+      },
+      {
+        "id": 46,
+        "title": "Brown Bear Doll",
+        "description": "Soft and cuddly brown bear doll",
+        "price": 12,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 10,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/46.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/46.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/46-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/46-2.jpg"
+        ]
+      },
+      {
+        "id": 69,
+        "title": "Toilet Paper Rolls",
+        "description": "Soft and absorbent toilet paper rolls made from high-quality materials. Each roll has 300 sheets and is gentle on the skin. Ideal for home, office, or commercial use.",
+        "price": 7,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 120,
+        "brand": "Kleenex",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/69.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/69.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/69-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/69-2.jpg"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Golden Laptop",
+        "description": "Powerful laptop with a golden finish",
+        "price": 20,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 5,
+        "brand": "LuxTech",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/2.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/2.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/2-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/2-2.jpg"
+        ]
+      },
+      {
+        "id": 86,
+        "title": "Classic Sports Watch",
+        "description": "This watch is perfect for the active lifestyle, featuring a durable and waterproof design. It includes features such as stopwatch, countdown timer, and multiple alarms. The classic design makes it a great accessory for any outfit.",
+        "price": 15,
+        "discountPercentage": 15,
+        "rating": 4,
+        "stock": 20,
+        "brand": "Sports Time",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/86.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/86.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/86-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/86-2.jpg"
+        ]
+      },
+      {
+        "id": 28,
+        "title": "Rainbow Color Socks",
+        "description": "Colorful socks for women",
+        "price": 8,
+        "discountPercentage": 20,
+        "rating": 4,
+        "stock": 20,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/28.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/28.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/28-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/28-2.jpg"
+        ]
+      },
+      {
+        "id": 53,
+        "title": "Green Camera Toy",
+        "description": "Green toy camera for kids",
+        "price": 12,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 8,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/53.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/53.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/53-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/53-2.jpg"
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Yellow Cellphone",
+        "description": "Stylish yellow smartphone with great features",
+        "price": 13,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 12,
+        "brand": "TechZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/12.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/12.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/12-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/12-2.jpg"
+        ]
+      },
+      {
+        "id": 32,
+        "title": "Small Hairband",
+        "description": "Cute hairband for girls",
+        "price": 5,
+        "discountPercentage": 20,
+        "rating": 3,
+        "stock": 25,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/32.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/32.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/32-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/32-2.jpg"
+        ]
+      },
+      {
+        "id": 65,
+        "title": "Blue Dish Sponges",
+        "description": "A pack of 6 blue dish sponges that are perfect for washing dishes and cleaning kitchen surfaces.",
+        "price": 5,
+        "discountPercentage": 20,
+        "rating": 4,
+        "stock": 15,
+        "brand": "Scotch-Brite",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/65.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/65.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/65-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/65-2.jpg"
+        ]
+      },
+      {
+        "id": 73,
+        "title": "Blue Food Gloves",
+        "description": "Disposable blue gloves made of food-grade PE material that are perfect for food preparation and handling.",
+        "price": 7,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 0,
+        "brand": "FoodSafe",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/73.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/73.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/73-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/73-2.jpg"
+        ]
+      },
+      {
+        "id": 24,
+        "title": "Brown Leather Handbag",
+        "description": "Stylish leather handbag for women",
+        "price": 5,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 12,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/24.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/24.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/24-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/24-2.jpg"
+        ]
+      },
+      {
+        "id": 49,
+        "title": "Yellow Robot Toy",
+        "description": "Yellow robot toy for kids",
+        "price": 15,
+        "discountPercentage": 5,
+        "rating": 4,
+        "stock": 8,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/49.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/49.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/49-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/49-2.jpg"
+        ]
+      },
+      {
+        "id": 48,
+        "title": "Blue Bear Doll",
+        "description": "Soft and cuddly blue bear doll",
+        "price": 12,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 0,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/48.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/48.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/48-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/48-2.jpg"
+        ]
+      },
+      {
+        "id": 25,
+        "title": "Beige Casual Cap",
+        "description": "Stylish casual cap for women",
+        "price": 7,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 25,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/25.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/25.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/25-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/25-2.jpg"
+        ]
+      },
+      {
+        "id": 72,
+        "title": "Green Bucket",
+        "description": "Sturdy and versatile green bucket made of high-quality plastic material. Large capacity for holding water, cleaning solutions, or other household items. Easy to carry with a comfortable handle.",
+        "price": 8,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 80,
+        "brand": "Rubbermaid",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/72.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/72.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/72-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/72-2.jpg"
+        ]
+      },
+      {
+        "id": 64,
+        "title": "Wash Detergent 1L",
+        "description": "1 liter bottle of wash detergent for all types of clothes",
+        "price": 12,
+        "discountPercentage": 10,
+        "rating": 5,
+        "stock": 8,
+        "brand": "HomeGoods",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/64.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/64.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/64-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/64-2.jpg"
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Wooden Speaker",
+        "description": "High-quality wooden speaker with great sound",
+        "price": 16,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 8,
+        "brand": "SoundWave",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/13.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/13.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/13-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/13-2.jpg"
+        ]
+      },
+      {
+        "id": 52,
+        "title": "Colorful Camera",
+        "description": "Colorful toy camera for kids",
+        "price": 10,
+        "discountPercentage": 5,
+        "rating": 5,
+        "stock": 10,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/52.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/52.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/52-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/52-2.jpg"
+        ]
+      },
+      {
+        "id": 29,
+        "title": "Simple Socks",
+        "description": "Plain socks for women",
+        "price": 5,
+        "discountPercentage": 0,
+        "rating": 3,
+        "stock": 30,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/29.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/29.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/29-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/29-2.jpg"
+        ]
+      },
+      {
+        "id": 91,
+        "title": "Classic Soccerball",
+        "description": "This is a classic soccerball made from high-quality materials that is perfect for playing with friends or in a league. It features a classic design with black and white hexagonal panels, and is built to last.",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 20,
+        "brand": "SportCo",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/91.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/91.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/91-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/91-2.jpg"
+        ]
+      },
+      {
+        "id": 68,
+        "title": "Big Trash Bags",
+        "description": "A pack of 20 big trash bags that can hold up to 30 gallons of garbage. Made from strong and durable materials to prevent leaks and tears.",
+        "price": 12,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 10,
+        "brand": "Glad",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/68.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/68.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/68-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/68-2.jpg"
+        ]
+      },
+      {
+        "id": 87,
+        "title": "Outdoor Cap",
+        "description": "This cap is designed for outdoor activities, with a lightweight and breathable material that keeps you cool and comfortable. It features an adjustable strap for a customizable fit, and is available in a variety of colors.",
+        "price": 8,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 15,
+        "brand": "Outdoor Gear",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/87.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/87.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/87-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/87-2.jpg"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Gaming Console",
+        "description": "High-performance gaming console for immersive gaming experiences",
+        "price": 10,
+        "discountPercentage": 10,
+        "rating": 3,
+        "stock": 7,
+        "brand": "GamerZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/3.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/3.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/3-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/3-2.jpg"
+        ]
+      },
+      {
+        "id": 34,
+        "title": "Fashion Jeans",
+        "description": "Trendy jeans for men",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 20,
+        "brand": "Fashionista",
+        "category": "Men's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/34.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/34.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/34-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/34-2.jpg"
+        ]
+      },
+      {
+        "id": 63,
+        "title": "Small Table Broom",
+        "description": "Small table broom for cleaning crumbs and small messes",
+        "price": 8,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 15,
+        "brand": "HomeGoods",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/63.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/63.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/63-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/63-2.jpg"
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Silver Laptop",
+        "description": "Powerful laptop with a silver finish",
+        "price": 12,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 4,
+        "brand": "LuxTech",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/8.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/8.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/8-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/8-2.jpg"
+        ]
+      },
+      {
+        "id": 75,
+        "title": "Big Soap",
+        "description": "A large, 500g bar of soap that is perfect for keeping your skin clean and moisturized. This soap is made from natural ingredients and has a refreshing scent.",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 30,
+        "brand": "Clean & Fresh",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/75.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/75.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/75-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/75-2.jpg"
+        ]
+      },
+      {
+        "id": 22,
+        "title": "Women Business Pants",
+        "description": "Professional pants for women",
+        "price": 8,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 15,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/22.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/22.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/22-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/22-2.jpg"
+        ]
+      },
+      {
+        "id": 101,
+        "title": "Sports Water Bottle",
+        "description": "A high-quality water bottle that is perfect for use during sports and outdoor activities. This bottle is made with BPA-free materials and features a leak-proof cap, a comfortable grip, and a large capacity. It's easy to clean and durable enough to withstand frequent use.",
+        "price": 15,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 50,
+        "brand": "Hydrate Pro",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/101.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/101.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/101-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/101-2.jpg"
+        ]
+      },
+      {
+        "id": 18,
+        "title": "Black/White TV",
+        "description": "Retro-style television set with black and white display",
+        "price": 10,
+        "discountPercentage": 20,
+        "rating": 5,
+        "stock": 7,
+        "brand": "RetroTech",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/18.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/18.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/18-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/18-2.jpg"
+        ]
+      },
+      {
+        "id": 38,
+        "title": "Blue Leather Wallet",
+        "description": "Stylish leather wallet for men",
+        "price": 15,
+        "discountPercentage": 20,
+        "rating": 4,
+        "stock": 0,
+        "brand": "Fashionista",
+        "category": "Men's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/38.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/38.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/38-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/38-2.jpg"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Slim Tablet",
+        "description": "Lightweight and portable tablet for everyday use",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 3,
+        "stock": 9,
+        "brand": "TechZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/4.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/4.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/4-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/4-2.jpg"
+        ]
+      },
+      {
+        "id": 80,
+        "title": "Men Workout Uniform",
+        "description": "A comfortable and breathable workout uniform for men. Made from a moisture-wicking fabric that keeps you cool and dry during your workout. Available in multiple colors and sizes.",
+        "price": 10,
+        "discountPercentage": 15,
+        "rating": 4,
+        "stock": 50,
+        "brand": "Fit & Strong",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/80.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/80.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/80-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/80-2.jpg"
+        ]
+      },
+      {
+        "id": 96,
+        "title": "Purple Yoga Mat",
+        "description": "This high-quality yoga mat is made from non-toxic materials and is designed to provide a comfortable and supportive surface for your yoga practice. It is easy to clean and transport, making it ideal for use at home or on the go.",
+        "price": 20,
+        "discountPercentage": 10,
+        "rating": 5,
+        "stock": 0,
+        "brand": "YogaLife",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/96.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/96.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/96-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/96-2.jpg"
+        ]
+      },
+      {
+        "id": 55,
+        "title": "Kids Radio Toy",
+        "description": "Radio toy for kids",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 10,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/55.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/55.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/55-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/55-2.jpg"
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Wireless Speaker",
+        "description": "Portable wireless speaker with great sound",
+        "price": 12,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 10,
+        "brand": "SoundWave",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/14.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/14.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/14-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/14-2.jpg"
+        ]
+      },
+      {
+        "id": 42,
+        "title": "Thin Glasses",
+        "description": "Thin glasses for men",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 20,
+        "brand": "Fashionista",
+        "category": "Men's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/42.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/42.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/42-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/42-2.jpg"
+        ]
+      },
+      {
+        "id": 15,
+        "title": "Black Cellphone",
+        "description": "Stylish black smartphone with great features",
+        "price": 11,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 20,
+        "brand": "TechZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/15.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/15.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/15-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/15-2.jpg"
+        ]
+      },
+      {
+        "id": 54,
+        "title": "Kids Computer Toy",
+        "description": "Computer toy for kids",
+        "price": 15,
+        "discountPercentage": 0,
+        "rating": 5,
+        "stock": 12,
+        "brand": "ToyLand",
+        "category": "Toys and Games",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/54.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/54.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/54-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/54-2.jpg"
+        ]
+      },
+      {
+        "id": 97,
+        "title": "Yoga Equipment Set",
+        "description": "This yoga equipment set includes a yoga mat, block, strap, and carrying bag. The mat is made from durable and non-slip material, while the block and strap are designed to help improve your yoga practice. The carrying bag makes it easy to transport your yoga gear to and from the studio.",
+        "price": 15,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 20,
+        "brand": "YogaLife",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/97.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/97.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/97-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/97-2.jpg"
+        ]
+      },
+      {
+        "id": 81,
+        "title": "Gym Cloth Top",
+        "description": "A lightweight and breathable gym cloth top for women. Made from a stretchy fabric that allows you to move freely during your workout. Available in multiple colors and sizes.",
+        "price": 12,
+        "discountPercentage": 10,
+        "rating": 4,
+        "stock": 70,
+        "brand": "Fit & Flex",
+        "category": "Sportswear",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/81.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/81.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/81-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/81-2.jpg"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Gold Radio",
+        "description": "Vintage-style golden radio with modern features",
+        "price": 15,
+        "discountPercentage": 20,
+        "rating": 4,
+        "stock": 8,
+        "brand": "TechZone",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/5.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/5.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/5-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/5-2.jpg"
+        ]
+      },
+      {
+        "id": 39,
+        "title": "Black Classic Watch",
+        "description": "Classic black watch for men",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 15,
+        "brand": "Fashionista",
+        "category": "Men's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/39.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/39.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/39-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/39-2.jpg"
+        ]
+      },
+      {
+        "id": 19,
+        "title": "Coffee Maker",
+        "description": "Automatic coffee maker with programmable features",
+        "price": 19,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 15,
+        "brand": "CoffeeTech",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/19.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/19.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/19-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/19-2.jpg"
+        ]
+      },
+      {
+        "id": 100,
+        "title": "Outdoor Tent",
+        "description": "A spacious and durable outdoor tent that can comfortably accommodate up to 6 people. This tent is made with high-quality materials and features multiple ventilation points, a waterproof flysheet, and a built-in groundsheet. It's easy to set up and pack away, making it perfect for camping trips and outdoor adventures.",
+        "price": 20,
+        "discountPercentage": 0,
+        "rating": 3,
+        "stock": 10,
+        "brand": "Adventure Gear",
+        "category": "Sports Equipment",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/100.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/100.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/100-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/100-2.jpg"
+        ]
+      },
+      {
+        "id": 23,
+        "title": "White Leather Handbag",
+        "description": "Stylish leather handbag for women",
+        "price": 15,
+        "discountPercentage": 10,
+        "rating": 4,
+        "stock": 0,
+        "brand": "Fashionista",
+        "category": "Women's Fashion",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/23.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/23.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/23-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/23-2.jpg"
+        ]
+      },
+      {
+        "id": 74,
+        "title": "Paper Plates",
+        "description": "A pack of 50 high-quality paper plates that are perfect for parties, picnics, and other events. These plates are durable, eco-friendly, and disposable.",
+        "price": 15,
+        "discountPercentage": 5,
+        "rating": 3,
+        "stock": 100,
+        "brand": "Party Supplies",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/74.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/74.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/74-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/74-2.jpg"
+        ]
+      },
+      {
+        "id": 62,
+        "title": "Pink Dish Gloves",
+        "description": "Pink dish gloves for washing dishes",
+        "price": 5,
+        "discountPercentage": 0,
+        "rating": 3,
+        "stock": 30,
+        "brand": "HomeGoods",
+        "category": "Household",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/62.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/62.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/62-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/62-2.jpg"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Dark Monitor",
+        "description": "Large monitor with dark color scheme",
+        "price": 10,
+        "discountPercentage": 0,
+        "rating": 4,
+        "stock": 5,
+        "brand": "LuxTech",
+        "category": "Electronics",
+        "thumbnail": "https://click-and-collect2.s3.amazonaws.com/9.jpg",
+        "images": [
+          "https://click-and-collect2.s3.amazonaws.com/9.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/9-1.jpg",
+          "https://click-and-collect2.s3.amazonaws.com/9-2.jpg"
+        ]
+      }
+    ]
+  }

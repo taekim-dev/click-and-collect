@@ -2,8 +2,10 @@ import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import '../assets/styles/HomePage.css';
-import dummyData from '../data/dummyData.json';
-import mapDummyJSONToProducts from '../mappers/mapDummyJSONToProducts';
+//import dummyData from '../data/dummyData.json';
+import sampleData from '../data/sampleData.json';
+//import mapDummyJSONToProducts from '../mappers/mapDummyJSONToProducts';
+import mapSampleJSONToProducts from '../mappers/mapSampleJSONToProducts';
 import coinIcon from '../assets/images/coin-icon.png';
 
 const ITEMS_PER_PAGE = 9;
@@ -46,7 +48,8 @@ function HomePage() {
 
   // Set products and categories based on dummy data
   useEffect(() => {
-    const data = mapDummyJSONToProducts(dummyData.products);
+    //const data = mapDummyJSONToProducts(dummyData.products);
+    const data = mapSampleJSONToProducts(sampleData.products);
     setProducts(data);
     setCategories(getUniqueCategories(data));
   }, [getUniqueCategories]);
