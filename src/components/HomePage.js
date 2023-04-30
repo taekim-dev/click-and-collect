@@ -2,11 +2,9 @@ import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import '../assets/styles/HomePage.css';
-//import dummyData from '../data/dummyData.json';
-import sampleData from '../data/sampleData.json';
-//import mapDummyJSONToProducts from '../mappers/mapDummyJSONToProducts';
-import mapSampleJSONToProducts from '../mappers/mapSampleJSONToProducts';
+import mapJSONToProducts from '../mappers/mapJSONToProducts';
 import coinIcon from '../assets/images/coin-icon.png';
+import axios from 'axios';
 
 const ITEMS_PER_PAGE = 9;
 
@@ -46,13 +44,28 @@ function HomePage() {
     return sortedCategories;
   }, []);
 
-  // Set products and categories based on dummy data
-  useEffect(() => {
+    // Set products and categories based on data from S3 bucket
+    useEffect(() => {
+
     //const data = mapDummyJSONToProducts(dummyData.products);
-    const data = mapSampleJSONToProducts(sampleData.products);
-    setProducts(data);
-    setCategories(getUniqueCategories(data));
+    //const data = mapSampleJSONToProducts(sampleData.products);
+
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('https://click-and-collect2.s3.amazonaws.com/data/productAll.json');
+        const data = response.data;
+  
+        const mappedData = mapJSONToProducts(data.products);
+        setProducts(mappedData);
+        setCategories(getUniqueCategories(mappedData));
+      } catch (error) {
+        console.error('There was a problem with the request:', error);
+      }
+    };
+  
+    fetchProducts();
   }, [getUniqueCategories]);
+  
 
   // Load filter state from local storage
   useEffect(() => {

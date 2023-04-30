@@ -5,7 +5,7 @@ import Product from '../models/Product';
  * @param {Array} data - An array of products from the dummyJSON API.
  * @returns {Array} - An array of Product instances.
  */
-function mapSampleJSONToProducts(data) {
+function mapJSONToProducts(data) {
   return data.map((item) => {
     const id = item.id;
     const title = item.title;
@@ -27,4 +27,4 @@ function mapSampleJSONToProducts(data) {
   });
 }
 
-export default mapSampleJSONToProducts;
+export default mapJSONToProducts;
