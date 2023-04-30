@@ -202,9 +202,9 @@
 
   /* Right Pane */
   .home-page .right-pane {
-    margin-left: 5%;
+    margin-left: 4%;
     margin-top: 22px;
-    width: 60%;
+    width: 61%;
   }
 
   .home-page .sorting-container {
@@ -339,8 +339,7 @@
 
   .home-page .card .product-title {
     font-family: "Montserrat", sans-serif;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 18px;
     text-align: center;
   }
   
