@@ -262,7 +262,32 @@
     margin-bottom: 1rem;
     background-color: white;
     box-sizing: border-box;
+    position: relative;
   }
+
+  .home-page .card .product-rating {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 1.3rem;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .home-page .card .product-price {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.3rem;
+    font-family: "Montserrat", sans-serif;
+  }  
+
+  .home-page .card .price-coin-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1px;
+  }  
 
   .home-page .pagination {
     display: flex;
@@ -299,10 +324,6 @@
   .home-page .pagination-page:not(.current):hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
   }
-  
-  .home-page .card {
-    position: relative;
-  }
 
   .home-page .card:hover {
     outline: 3px solid #333;
@@ -314,6 +335,13 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  .home-page .card .product-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
   }
   
   .home-page .collect-button {
@@ -344,7 +372,7 @@
     color: rgb(0, 0, 0);
     width: 100%;
     height: 15%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(220, 227, 217, 0.696);
     outline: none;
     position: absolute;
     bottom: 0;
@@ -361,7 +389,7 @@
   }
   
   .home-page .collect-button:active {
-    background-color: rgb(255, 154, 13);
+    background-color: rgba(255, 178, 13, 0.929);
     box-shadow: none;
   }
 

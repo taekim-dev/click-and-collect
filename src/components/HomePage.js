@@ -287,6 +287,11 @@ function HomePage() {
                 onClick={() => handleCardClick(product)}
                 >
                 <img src={product.image} alt={product.title} className="product-image" />
+                <div className="product-rating">★{product.rating}</div>
+                <div className="product-price">
+                    <img src={coinIcon} alt="Coin" className="price-coin-icon" />
+                    {product.price}
+                </div>
                 {product.instock ? (
                     <button
                     className="collect-button"
@@ -297,6 +302,7 @@ function HomePage() {
                 ) : (
                     <div className="out-of-stock">Out of stock</div>
                 )}
+                <div className="product-title">{product.title}</div>
                 </div>
             ))}
             </div>
