@@ -24,6 +24,7 @@ function HomePage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(20);
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Filter and sort products based on active filters and sorting option
   const filteredProducts = sortProducts(
@@ -35,7 +36,8 @@ function HomePage() {
     .filter((product) => product.rating >= ratingRange)
     .filter((product) => !discountFilter || product.discount > 0)
     .filter((product) => !inStockFilter || product.instock)
-  );
+    .filter((product) => product.title.toLowerCase().includes(searchQuery.toLowerCase()))
+  );  
 
   // Get unique categories from products list
   const getUniqueCategories = useCallback((products) => {
@@ -269,6 +271,15 @@ function HomePage() {
           </div>
         </div>
         <div className="right-pane">
+            <div className="search-container">
+                <input
+                    type="text"
+                    placeholder="&#128269;"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="search-input"
+                />
+            </div>
           <div className="sorting-container">
             <span className="sorted-by-text">Sorted by</span>
             <button
