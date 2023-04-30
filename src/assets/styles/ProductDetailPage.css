@@ -20,16 +20,94 @@
     cursor: pointer;
     padding: 10px 20px;
     margin-bottom: 20px;
-    
   }
   
-  .product-detail-page .product-detail-page-wrapper .back-button:hover{
+  .product-detail-page .product-detail-page-wrapper .back-button:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   }
-
-  .product-detail-page .product-detail-page-wrapper .back-button:active{
+  
+  .product-detail-page .product-detail-page-wrapper .back-button:active {
     transform: translateY(2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .product-detail {
+    display: flex;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .product-image-container {
+    flex: 0 0 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 35rem;
+    height: 32rem;
+    border: 1px solid black;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .ratings {
+    font-size: 28px;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .product-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .product-price {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .coin-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .product-description {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .collect-button {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .collect-button:hover {
+    background-color: rgba(150, 146, 116, 0.35);
+  }
+  
+  .product-detail-page .product-detail-page-wrapper .collect-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
 
   .product-detail-page .product-detail-page-wrapper .product-detail {

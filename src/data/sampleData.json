@@ -3,7 +3,7 @@
       {
         "id": 20,
         "title": "Yellow T-shirts",
-        "description": "Comfortable cotton T-shirts for women",
+        "description": "Comfortable cotton T-shirts for women: Our collection of cotton T-shirts for women are made from high-quality fabric that feels soft and gentle against the skin, providing maximum comfort throughout the day.",
         "price": 9,
         "discountPercentage": 0,
         "rating": 4,
@@ -37,7 +37,7 @@
       {
         "id": 61,
         "title": "Yellow Bath Towels",
-        "description": "Soft and fluffy yellow bath towels",
+        "description": "Soft and fluffy yellow bath towels: Wrap yourself in luxury with our soft and fluffy yellow bath towels, designed to give you a spa-like experience in the comfort of your own home.",
         "price": 5,
         "discountPercentage": 0,
         "rating": 4,
@@ -54,7 +54,7 @@
       {
         "id": 36,
         "title": "Color Shirts Set",
-        "description": "Set of colorful shirts for men",
+        "description": "Set of colorful shirts for men: Elevate your wardrobe with our set of colorful shirts for men, made from premium quality fabric that is both comfortable and durable",
         "price": 10,
         "discountPercentage": 20,
         "rating": 4,
@@ -71,7 +71,7 @@
       {
         "id": 41,
         "title": "Luxury Watch",
-        "description": "Luxurious watch for men",
+        "description": "Luxurious watch for men: Our luxurious watch for men is crafted with precision and care, featuring a sleek design and high-quality materials to provide the perfect blend of style and function.",
         "price": 20,
         "discountPercentage": 20,
         "rating": 5,
@@ -88,7 +88,7 @@
       {
         "id": 16,
         "title": "E-brook Reader",
-        "description": "Electronic book reader with high-resolution display",
+        "description": "Electronic book reader with high-resolution display: Experience the joy of reading with our electronic book reader, featuring a high-resolution display that makes every word crystal-clear and easy to read",
         "price": 10,
         "discountPercentage": 0,
         "rating": 3,
@@ -105,7 +105,7 @@
       {
         "id": 57,
         "title": "Doll Clothes",
-        "description": "Clothes for dolls",
+        "description": "Clothes for dolls that are made with soft and durable materials, perfect for imaginative playtime.",
         "price": 9,
         "discountPercentage": 5,
         "rating": 4,
@@ -156,7 +156,7 @@
       {
         "id": 6,
         "title": "Wireless Keyboard",
-        "description": "Sleek wireless keyboard for easy typing",
+        "description": "Sleek wireless keyboard for easy and efficient typing, providing a smooth and comfortable experience.",
         "price": 5,
         "discountPercentage": 0,
         "rating": 4,
@@ -173,7 +173,7 @@
       {
         "id": 7,
         "title": "Slim Laptop",
-        "description": "Ultra-thin laptop with long battery life",
+        "description": "Ultra-thin laptop with long battery life, designed for on-the-go use and perfect for both personal and professional needs.",
         "price": 15,
         "discountPercentage": 0,
         "rating": 4,
@@ -224,7 +224,7 @@
       {
         "id": 56,
         "title": "Puzzle Game Toy",
-        "description": "Puzzle game toy for kids",
+        "description": "Puzzle game toy for kids that encourages problem-solving skills and critical thinking while providing hours of entertainment.",
         "price": 7,
         "discountPercentage": 0,
         "rating": 3,
@@ -241,7 +241,7 @@
       {
         "id": 17,
         "title": "Classic TV",
-        "description": "Vintage television set with modern features",
+        "description": "Vintage television set with modern features that offers a nostalgic look and feel while providing the latest technology and features.",
         "price": 20,
         "discountPercentage": 10,
         "rating": 4,
@@ -258,7 +258,7 @@
       {
         "id": 40,
         "title": "Classic Metal Watch",
-        "description": "Classic metal watch for men",
+        "description": "Classic metal watch for men that is both stylish and functional, perfect for everyday wear and special occasions.",
         "price": 15,
         "discountPercentage": 10,
         "rating": 4,
@@ -275,7 +275,7 @@
       {
         "id": 37,
         "title": "Brown Leather Wallet",
-        "description": "Stylish leather wallet for men",
+        "description": "Stylish pink dress for women that is perfect for a variety of occasions, with a flattering design and comfortable fit.",
         "price": 15,
         "discountPercentage": 0,
         "rating": 5,
@@ -326,7 +326,7 @@
       {
         "id": 21,
         "title": "Pink Dress",
-        "description": "Stylish pink dress for women",
+        "description": "Stylish pink dress for women: A beautiful and elegant pink dress, perfect for special occasions or a night out. Made with high-quality fabrics and designed to flatter any body type, this dress is a must-have in any woman's wardrobe.",
         "price": 10,
         "discountPercentage": 0,
         "rating": 5,
@@ -343,7 +343,7 @@
       {
         "id": 47,
         "title": "Red Bear Doll",
-        "description": "Soft and cuddly red bear doll",
+        "description": "Soft and cuddly red bear doll that is made with high-quality materials, perfect for snuggles and playtime.",
         "price": 12,
         "discountPercentage": 0,
         "rating": 4,
@@ -360,7 +360,7 @@
       {
         "id": 10,
         "title": "Red Cellphone",
-        "description": "Stylish red smartphone with great features",
+        "description": "This stylish red smartphone is designed with great features that make it a perfect choice for anyone looking for a reliable and efficient device.",
         "price": 9,
         "discountPercentage": 0,
         "rating": 4,
@@ -377,7 +377,7 @@
       {
         "id": 51,
         "title": "Lego Block Toy",
-        "description": "Lego block toy for kids",
+        "description": "Lego block toy for kids: With endless possibilities for creativity and imagination, this Lego block toy is the perfect gift for kids of all ages. It comes with a variety of different blocks and accessories, allowing children to build and create whatever they can imagine.",
         "price": 15,
         "discountPercentage": 10,
         "rating": 5,
@@ -428,7 +428,7 @@
       {
         "id": 26,
         "title": "Simple Backpack",
-        "description": "Stylish backpack for women",
+        "description": "Stylish backpack for women: Whether you're going to work or heading out for a day of adventure, this stylish backpack is the perfect accessory.",
         "price": 10,
         "discountPercentage": 0,
         "rating": 4,
@@ -496,7 +496,7 @@
       {
         "id": 30,
         "title": "Color Socks Gift Set",
-        "description": "Colorful socks gift set for women",
+        "description": "Colorful socks gift set for women: Add a pop of color to your outfit with this fun and playful socks gift set. With a variety of bright and bold colors, these socks are sure to make a statement.",
         "price": 15,
         "discountPercentage": 10,
         "rating": 5,
@@ -513,7 +513,7 @@
       {
         "id": 31,
         "title": "Simple Female Dress",
-        "description": "Plain dress for women",
+        "description": "Plain dress for women: Sometimes less is more, and this simple yet elegant plain dress is the perfect example. ",
         "price": 18,
         "discountPercentage": 15,
         "rating": 4,
@@ -581,7 +581,7 @@
       {
         "id": 27,
         "title": "Pink Metal Watch",
-        "description": "Stylish metal watch for women",
+        "description": "Stylish metal watch for women: With a sleek and sophisticated design, this stylish metal watch is the perfect accessory for any outfit.",
         "price": 18,
         "discountPercentage": 0,
         "rating": 5,
@@ -598,7 +598,7 @@
       {
         "id": 1,
         "title": "Wooden Radio",
-        "description": "Vintage-style wooden radio with modern features",
+        "description": "Vintage-style wooden radio with modern features: Add a touch of retro style to your home with this vintage-style wooden radio.",
         "price": 15,
         "discountPercentage": 0,
         "rating": 5,
@@ -649,7 +649,7 @@
       {
         "id": 50,
         "title": "Color Block Toy",
-        "description": "Colorful block toy for kids",
+        "description": "Colorful block toy for kids.  With a variety of different blocks and accessories, children can let their imaginations run wild and build anything they can imagine.",
         "price": 8,
         "discountPercentage": 0,
         "rating": 4,
@@ -666,7 +666,7 @@
       {
         "id": 11,
         "title": "Blue Cellphone",
-        "description": "Stylish blue smartphone with great features",
+        "description": "The stylish blue smartphone boasts great features and is perfect for those who love to stay connected on-the-go.",
         "price": 14,
         "discountPercentage": 0,
         "rating": 4,
@@ -683,7 +683,7 @@
       {
         "id": 46,
         "title": "Brown Bear Doll",
-        "description": "Soft and cuddly brown bear doll",
+        "description": "This soft and cuddly brown bear doll is the perfect companion for children of all ages.",
         "price": 12,
         "discountPercentage": 0,
         "rating": 4,
@@ -717,7 +717,7 @@
       {
         "id": 2,
         "title": "Golden Laptop",
-        "description": "Powerful laptop with a golden finish",
+        "description": "The powerful laptop with a golden finish offers a seamless computing experience and is perfect for work or play.",
         "price": 20,
         "discountPercentage": 0,
         "rating": 5,
@@ -751,7 +751,7 @@
       {
         "id": 28,
         "title": "Rainbow Color Socks",
-        "description": "Colorful socks for women",
+        "description": "These colorful socks for women are perfect for adding a pop of color to any outfit.",
         "price": 8,
         "discountPercentage": 20,
         "rating": 4,
@@ -768,7 +768,7 @@
       {
         "id": 53,
         "title": "Green Camera Toy",
-        "description": "Green toy camera for kids",
+        "description": "The green toy camera is a fun and playful way for kids to capture their favorite memories.",
         "price": 12,
         "discountPercentage": 0,
         "rating": 4,
@@ -785,7 +785,7 @@
       {
         "id": 12,
         "title": "Yellow Cellphone",
-        "description": "Stylish yellow smartphone with great features",
+        "description": "The stylish yellow smartphone is a must-have for tech-savvy individuals who want the latest and greatest features.",
         "price": 13,
         "discountPercentage": 0,
         "rating": 4,
@@ -802,7 +802,7 @@
       {
         "id": 32,
         "title": "Small Hairband",
-        "description": "Cute hairband for girls",
+        "description": "This cute hairband is a perfect accessory for girls who want to add a touch of style to their outfit.",
         "price": 5,
         "discountPercentage": 20,
         "rating": 3,
@@ -853,7 +853,7 @@
       {
         "id": 24,
         "title": "Brown Leather Handbag",
-        "description": "Stylish leather handbag for women",
+        "description": "The stylish leather handbag is both practical and fashionable, making it the perfect accessory for any outfit.",
         "price": 5,
         "discountPercentage": 0,
         "rating": 5,
@@ -870,7 +870,7 @@
       {
         "id": 49,
         "title": "Yellow Robot Toy",
-        "description": "Yellow robot toy for kids",
+        "description": "The yellow robot toy is a fun and educational way for kids to learn about robotics and engineering.",
         "price": 15,
         "discountPercentage": 5,
         "rating": 4,
@@ -887,7 +887,7 @@
       {
         "id": 48,
         "title": "Blue Bear Doll",
-        "description": "Soft and cuddly blue bear doll",
+        "description": "This soft and cuddly blue bear doll is a perfect gift for any child who loves to cuddle up with their favorite toy.",
         "price": 12,
         "discountPercentage": 0,
         "rating": 4,
@@ -904,7 +904,7 @@
       {
         "id": 25,
         "title": "Beige Casual Cap",
-        "description": "Stylish casual cap for women",
+        "description": "Stylish casual cap for women is perfect for adding a touch of fashion to any outfit, while also providing protection from the sun. This cap comes in a variety of colors and is made from high-quality materials for long-lasting wear.",
         "price": 7,
         "discountPercentage": 0,
         "rating": 5,
@@ -938,7 +938,7 @@
       {
         "id": 64,
         "title": "Wash Detergent 1L",
-        "description": "1 liter bottle of wash detergent for all types of clothes",
+        "description": "1 liter bottle of wash detergent for all types of clothes is perfect for keeping your clothes clean and fresh. ",
         "price": 12,
         "discountPercentage": 10,
         "rating": 5,
@@ -955,7 +955,7 @@
       {
         "id": 13,
         "title": "Wooden Speaker",
-        "description": "High-quality wooden speaker with great sound",
+        "description": "High-quality wooden speaker with great sound is perfect for music lovers who want to enjoy their favorite tunes with great sound quality. ",
         "price": 16,
         "discountPercentage": 0,
         "rating": 4,
@@ -972,7 +972,7 @@
       {
         "id": 52,
         "title": "Colorful Camera",
-        "description": "Colorful toy camera for kids",
+        "description": "Colorful toy camera for kids is perfect for inspiring creativity and imagination in young children.",
         "price": 10,
         "discountPercentage": 5,
         "rating": 5,
@@ -989,7 +989,7 @@
       {
         "id": 29,
         "title": "Simple Socks",
-        "description": "Plain socks for women",
+        "description": "Plain socks for women are perfect for everyday wear. These socks are made from soft and comfortable materials, and come in a variety of colors and styles to suit your individual preferenc",
         "price": 5,
         "discountPercentage": 0,
         "rating": 3,
@@ -1074,7 +1074,7 @@
       {
         "id": 34,
         "title": "Fashion Jeans",
-        "description": "Trendy jeans for men",
+        "description": "Trendy jeans for men are the perfect combination of style and comfort. Made with high-quality denim fabric, these jeans feature a sleek and modern design that is perfect for any occasion.",
         "price": 10,
         "discountPercentage": 0,
         "rating": 4,
@@ -1108,7 +1108,7 @@
       {
         "id": 8,
         "title": "Silver Laptop",
-        "description": "Powerful laptop with a silver finish",
+        "description": "Looking for a high-performance laptop that can keep up with your demanding work and entertainment needs?",
         "price": 12,
         "discountPercentage": 0,
         "rating": 4,
@@ -1142,7 +1142,7 @@
       {
         "id": 22,
         "title": "Women Business Pants",
-        "description": "Professional pants for women",
+        "description": "Professional pants for women are perfect for the office or other professional settings. These pants are made from high-quality materials and feature a flattering fit that will make you look and feel great.",
         "price": 8,
         "discountPercentage": 0,
         "rating": 4,
@@ -1176,7 +1176,7 @@
       {
         "id": 18,
         "title": "Black/White TV",
-        "description": "Retro-style television set with black and white display",
+        "description": "A retro-style television set that features a black and white display, reminiscent of the classic television sets from the mid-20th century.",
         "price": 10,
         "discountPercentage": 20,
         "rating": 5,
@@ -1193,7 +1193,7 @@
       {
         "id": 38,
         "title": "Blue Leather Wallet",
-        "description": "Stylish leather wallet for men",
+        "description": "Stylish leather wallet for men is perfect for keeping your money and cards organized and secure.",
         "price": 15,
         "discountPercentage": 20,
         "rating": 4,
@@ -1210,7 +1210,7 @@
       {
         "id": 4,
         "title": "Slim Tablet",
-        "description": "Lightweight and portable tablet for everyday use",
+        "description": "With its sleek design and user-friendly interface, you can easily access your favorite apps and stay connected on-the-go.",
         "price": 10,
         "discountPercentage": 0,
         "rating": 3,
@@ -1261,7 +1261,7 @@
       {
         "id": 55,
         "title": "Kids Radio Toy",
-        "description": "Radio toy for kids",
+        "description": "Radio toy for kids is perfect for young children who love to play and explore.",
         "price": 10,
         "discountPercentage": 0,
         "rating": 4,
@@ -1278,7 +1278,7 @@
       {
         "id": 14,
         "title": "Wireless Speaker",
-        "description": "Portable wireless speaker with great sound",
+        "description": "Portable wireless speaker with great sound is perfect for music lovers who want to enjoy their favorite tunes on the go.",
         "price": 12,
         "discountPercentage": 0,
         "rating": 4,
@@ -1295,7 +1295,7 @@
       {
         "id": 42,
         "title": "Thin Glasses",
-        "description": "Thin glasses for men",
+        "description": "Thin glasses for men: These stylish and lightweight glasses are perfect for everyday wear.",
         "price": 10,
         "discountPercentage": 0,
         "rating": 4,
@@ -1312,7 +1312,7 @@
       {
         "id": 15,
         "title": "Black Cellphone",
-        "description": "Stylish black smartphone with great features",
+        "description": "Stylish black smartphone with great features is perfect for those who want a sleek and modern device that can keep up with their busy lives.",
         "price": 11,
         "discountPercentage": 0,
         "rating": 5,
@@ -1329,7 +1329,7 @@
       {
         "id": 54,
         "title": "Kids Computer Toy",
-        "description": "Computer toy for kids",
+        "description": "Computer toy for kids: Let your child's imagination soar with this fun and interactive computer toy.",
         "price": 15,
         "discountPercentage": 0,
         "rating": 5,
@@ -1380,7 +1380,7 @@
       {
         "id": 5,
         "title": "Gold Radio",
-        "description": "Vintage-style golden radio with modern features",
+        "description": "Vintage-style golden radio with modern features: This beautiful vintage-style radio is sure to turn heads.",
         "price": 15,
         "discountPercentage": 20,
         "rating": 4,
@@ -1397,7 +1397,7 @@
       {
         "id": 39,
         "title": "Black Classic Watch",
-        "description": "Classic black watch for men",
+        "description": "Classic black watch for men: This timeless black watch is the perfect accessory for any outfit. ",
         "price": 10,
         "discountPercentage": 0,
         "rating": 4,
@@ -1414,7 +1414,7 @@
       {
         "id": 19,
         "title": "Coffee Maker",
-        "description": "Automatic coffee maker with programmable features",
+        "description": "The automatic coffee maker with programmable features is the perfect addition to your kitchen.",
         "price": 19,
         "discountPercentage": 0,
         "rating": 4,
@@ -1448,7 +1448,7 @@
       {
         "id": 23,
         "title": "White Leather Handbag",
-        "description": "Stylish leather handbag for women",
+        "description": "Stylish leather handbag for women: This elegant leather handbag is perfect for the modern woman on-the-go.",
         "price": 15,
         "discountPercentage": 10,
         "rating": 4,
@@ -1482,7 +1482,7 @@
       {
         "id": 62,
         "title": "Pink Dish Gloves",
-        "description": "Pink dish gloves for washing dishes",
+        "description": "Pink dish gloves for washing dishes: These durable and stylish pink dish gloves are perfect for protecting your hands while doing dishes.",
         "price": 5,
         "discountPercentage": 0,
         "rating": 3,
@@ -1499,7 +1499,7 @@
       {
         "id": 9,
         "title": "Dark Monitor",
-        "description": "Large monitor with dark color scheme",
+        "description": "A large monitor with a sleek and modern design, featuring a dark color scheme that perfectly complements any workspace.",
         "price": 10,
         "discountPercentage": 0,
         "rating": 4,
