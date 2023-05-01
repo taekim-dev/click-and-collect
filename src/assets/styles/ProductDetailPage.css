@@ -152,6 +152,14 @@
     font-size: 30px;
     margin-bottom: 20px;
   }
+
+  .product-detail-page .product-detail-page-wrapper .product-discount {
+    margin-left: 5px;
+    font-family:'Courier New', Courier, monospace;
+    color: rgba(255, 30, 0, 0.883);
+    font-size: 30px;
+    font-weight: bold;
+  }
   
   .product-detail-page .product-detail-page-wrapper .coin-icon {
     width: 40px;

@@ -65,6 +65,11 @@ function handleCollectButtonClick(e, product) {
                 <img src={coinIcon} alt="Coin" className="coin-icon" />
                 <span>{product.price}</span>
               </div>
+              {product.discount > 0 && (
+                  <span className="product-discount">
+                    {product.discount}% OFF
+                  </span>
+                )}
               <p className="product-description">{product.description}</p>
               <button
                 className={`collect-button${product.instock ? '' : ' disabled'}`}
