@@ -135,17 +135,43 @@ function HomePage() {
     setSelectedCategory(e.target.value);
   }
 
-  // Generate an array of page numbers
-  function generatePageNumbers() {
-    const numberOfPages = calculateNumberOfPages();
-    const pageNumbers = [];
-
-    for (let i = 1; i <= numberOfPages; i++) {
-      pageNumbers.push(i);
+    // Generate an array of page numbers
+    function generatePageNumbers() {
+        const numberOfPages = calculateNumberOfPages();
+        const pageNumbers = [];
+        const maxPages = 5; // Set the maximum number of pages to display
+    
+        for (let i = 1; i <= Math.min(numberOfPages, maxPages); i++) {
+        pageNumbers.push(i);
+        }
+    
+        return pageNumbers;
     }
-
-    return pageNumbers;
-  }
+  
+  // Display pagination up to 5 pages with handling more than 5 pages
+    function displayLimitedPagination() {
+        const numberOfPages = calculateNumberOfPages();
+        const maxPages = 5;
+        let pageNumbers = [];
+    
+        if (numberOfPages <= maxPages) {
+        pageNumbers = generatePageNumbers();
+        } else {
+        const mid = Math.floor(maxPages / 2);
+        const isNearStart = currentPage <= mid;
+        const isNearEnd = numberOfPages - currentPage < mid;
+        if (isNearStart) {
+            pageNumbers = Array.from({ length: maxPages }, (_, i) => i + 1);
+        } else if (isNearEnd) {
+            pageNumbers = Array.from({ length: maxPages }, (_, i) => numberOfPages - maxPages + i + 1);
+        } else {
+            pageNumbers = Array.from({ length: maxPages }, (_, i) => currentPage - mid + i);
+        }
+        }
+    
+        return pageNumbers;
+    }
+  
 
   // Sort products based on the active sorting button
   function sortProducts(products) {
@@ -338,15 +364,15 @@ function HomePage() {
         >
             &lt;
         </button>
-        {generatePageNumbers().map((number) => (
+        {displayLimitedPagination().map((number) => (
             <span
-            key={number}
-            className={`pagination-page${currentPage === number ? ' current' : ''}`}
-            onClick={() => setCurrentPage(number)}
+                key={number}
+                className={`pagination-page${currentPage === number ? ' current' : ''}`}
+                onClick={() => setCurrentPage(number)}
             >
-            {number}
+                {number}
             </span>
-        ))}
+            ))}
         <button
             className="pagination-arrow"
             onClick={() => setCurrentPage(calculateNumberOfPages())}
