@@ -1,15 +1,36 @@
-import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useContext, useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import '../assets/styles/ProductDetailPage.css';
 import coinIcon from '../assets/images/coin-icon.png';
 import AppContext from '../context/AppContext';
 import Breadcrumbs from './Breadcrumbs';
+import axios from 'axios';
+import mapJSONToSingleProduct from '../mappers/mapJSONToSingleProduct';
 
 function ProductDetailPage() {
   // Destructure the required values from AppContext
   const { cartItems, setCartItems, coinBalance, setCoinBalance } = useContext(AppContext);
-  const location = useLocation();
-  const product = location.state.product;
+  const [product, setProduct] = useState(null);
+  const { id } = useParams();
+  
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(
+          `https://click-and-collect2.s3.amazonaws.com/data/products/${id}.json`
+        );
+        const data = response.data;
+        const mappedData = mapJSONToSingleProduct(data); 
+        setProduct(mappedData);
+      } catch (error) {
+        console.error("There was a problem with the request:", error);
+      }
+    };
+  
+    fetchProduct();
+  }, [id]);
+  
+  
 
 // Function to handle the collect button click
 function handleCollectButtonClick(e, product) {
@@ -45,41 +66,51 @@ function handleCollectButtonClick(e, product) {
 
   return (
     <div className="product-detail-page">
-        <Breadcrumbs
-            items={[
-                { label: 'Home', path: '/home' },
-                { label: 'Product' },
-                //{ label: product.category, path: `/category/${product.category}` },
-            ]}
-        />
+      <Breadcrumbs
+        items={[
+          { label: "Home", path: "/home" },
+          { label: "Product" },
+          //{ label: product.category, path: `/category/${product.category}` },
+        ]}
+      />
       <div className="product-detail-page-wrapper">
         <div className="content">
-          <div className="product-detail">
-            <div className="product-image-container">
-              <img src={product.image} alt={product.title} className="product-image" />
-            </div>
-            <div className="product-info">
-              <div className="ratings">{generateStars(product.rating)}</div>
-              <h2 className="product-title">{product.title}</h2>
-              <div className="product-price">
-                <img src={coinIcon} alt="Coin" className="coin-icon" />
-                <span>{product.price}</span>
+          {product ? ( // Add conditional rendering here
+            <div className="product-detail">
+              <div className="product-image-container">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="product-image"
+                />
               </div>
-              {product.discount > 0 && (
+              <div className="product-info">
+                <div className="ratings">{generateStars(product.rating)}</div>
+                <h2 className="product-title">{product.title}</h2>
+                <div className="product-price">
+                  <img src={coinIcon} alt="Coin" className="coin-icon" />
+                  <span>{product.price}</span>
+                </div>
+                {product.discount > 0 && (
                   <span className="product-discount">
                     {product.discount}% OFF
                   </span>
                 )}
-              <p className="product-description">{product.description}</p>
-              <button
-                className={`collect-button${product.instock ? '' : ' disabled'}`}
-                onClick={(e) => handleCollectButtonClick(e, product)}
-                disabled={!product.instock}
+                <p className="product-description">{product.description}</p>
+                <button
+                  className={`collect-button${
+                    product.instock ? "" : " disabled"
+                  }`}
+                  onClick={(e) => handleCollectButtonClick(e, product)}
+                  disabled={!product.instock}
                 >
-                {product.instock ? 'COLLECT' : 'Out of Stock'}
+                  {product.instock ? "COLLECT" : "Out of Stock"}
                 </button>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div>Loading...</div>
+          )}
         </div>
       </div>
     </div>
