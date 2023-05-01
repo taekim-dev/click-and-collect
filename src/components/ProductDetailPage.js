@@ -75,7 +75,7 @@ function handleCollectButtonClick(e, product) {
       />
       <div className="product-detail-page-wrapper">
         <div className="content">
-          {product && ( 
+          {product ? ( 
             <div className="product-detail">
               <div className="product-image-container">
                 <img
@@ -108,6 +108,18 @@ function handleCollectButtonClick(e, product) {
                 </button>
               </div>
             </div>
+          ) : (
+        // Skeleton loading JSX
+        <div className="product-detail">
+            <div className={`product-image-container skeleton product-image-container-skeleton`} />
+            <div className="product-info skeleton">
+            <div className={`ratings ratings-skeleton`} />
+            <div className={`product-title product-title-skeleton`} />
+            <div className={`product-price product-price-skeleton`} />
+            <p className={`product-description product-description-skeleton`} />
+            <button className={`collect-button collect-button-skeleton`} />
+            </div>
+        </div>
           )}
         </div>
       </div>
