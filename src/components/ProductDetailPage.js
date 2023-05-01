@@ -75,7 +75,7 @@ function handleCollectButtonClick(e, product) {
       />
       <div className="product-detail-page-wrapper">
         <div className="content">
-          {product ? ( // Add conditional rendering here
+          {product && ( 
             <div className="product-detail">
               <div className="product-image-container">
                 <img
@@ -108,8 +108,6 @@ function handleCollectButtonClick(e, product) {
                 </button>
               </div>
             </div>
-          ) : (
-            <div>Loading...</div>
           )}
         </div>
       </div>
