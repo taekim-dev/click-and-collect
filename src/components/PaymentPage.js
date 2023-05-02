@@ -14,6 +14,8 @@ function PaymentPage() {
   const [startCountUp, setStartCountUp] = useState(false);
   const [displayedCoins, setDisplayedCoins] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const navigate = useNavigate();
 
   const totalCoinsSpent = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -30,6 +32,19 @@ function PaymentPage() {
         }, 4000)
     }
   }, [isOrderCompleted])
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   // Function to handle the order button click
   function handleOrderClick() {
@@ -91,7 +106,7 @@ function PaymentPage() {
           </button>
         </div>
       </div>
-      {showConfetti && <Confetti />}
+      {showConfetti && <Confetti width={windowWidth} height={windowHeight} />}
     </div>
   );
 }
