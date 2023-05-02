@@ -88,8 +88,17 @@ function handleCollectButtonClick(e, product) {
                 <div className="ratings">{generateStars(product.rating)}</div>
                 <h2 className="product-title">{product.title}</h2>
                 <div className="product-price">
-                  <img src={coinIcon} alt="Coin" className="coin-icon" />
-                  <span>{product.price}</span>
+                <img src={coinIcon} alt="Coin" className="coin-icon" />
+                <span>{product.price}</span>
+                {product.discount > 0 && (
+                    <>
+                    <span className="original-price">
+                        {Math.round((product.price / (1 - product.discount / 100)))}
+                    </span>
+                    </>
+                )}
+
+
                 </div>
                 {product.discount > 0 && (
                   <span className="product-discount">

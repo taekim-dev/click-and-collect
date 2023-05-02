@@ -88,6 +88,14 @@
     font-size: 30px;
     margin-bottom: 20px;
   }
+
+  .product-detail-page .product-detail-page-wrapper .original-price {
+    text-decoration: line-through;
+    margin-left: 8px;
+    font-size: 25px;
+    font-weight: 100;
+  }
+  
   
   .product-detail-page .product-detail-page-wrapper .coin-icon {
     width: 40px;
