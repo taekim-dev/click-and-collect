@@ -244,6 +244,7 @@ function HomePage() {
                 value={ratingRange}
                 className="rating-range"
                 onChange={(e) => setRatingRange(e.target.value)}
+                style={{ "--range-percentage": `${((ratingRange - 3) / 2) * 100}%` }}
             />
           <div className="rating-labels">
             <span className="rating-label">★3</span>
@@ -267,6 +268,7 @@ function HomePage() {
                 value={minPrice}
                 className="price-range"
                 onChange={handleMinPriceChange}
+                style={{ "--range-percentage": `${(minPrice / maxPrice) * 100}%` }}
                 />
                 <input
                 type="number"

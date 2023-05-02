@@ -47,6 +47,7 @@
     -webkit-appearance: none;
     height: 10px;
     background-color: black;
+    background-image: linear-gradient(to right, #dddddd 0%, #dddddd var(--range-percentage), black var(--range-percentage), black 100%);
   }
   
   .home-page .rating-range::-webkit-slider-thumb {
@@ -149,6 +150,7 @@
     -webkit-appearance: none;
     height: 10px;
     background-color: black;
+    background-image: linear-gradient(to right, #dddddd 0%, #dddddd var(--range-percentage), black var(--range-percentage), black 100%);
   }
 
   .home-page .price-range::-webkit-slider-thumb {
