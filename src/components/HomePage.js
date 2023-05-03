@@ -54,7 +54,7 @@ function HomePage() {
 
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://click-and-collect2.s3.amazonaws.com/data/productAll.json');
+        const response = await axios.get('https://taekimdev.pythonanywhere.com/api/products/all/');
         const data = response.data;
   
         const mappedData = mapJSONToProducts(data.products);

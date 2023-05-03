@@ -17,7 +17,7 @@ function ProductDetailPage() {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `https://click-and-collect2.s3.amazonaws.com/data/products/${id}.json`
+          `https://taekimdev.pythonanywhere.com/api/products/${id}/`
         );
         const data = response.data;
         const mappedData = mapJSONToSingleProduct(data); 
