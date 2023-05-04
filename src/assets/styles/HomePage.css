@@ -255,6 +255,10 @@
     padding-right: 1.2em;
   }
 
+  .home-page .search-input::placeholder {
+    text-align: right;
+  }
+
   .home-page .sorting-container {
     display: flex;
     align-items: center;

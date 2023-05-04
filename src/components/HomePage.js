@@ -28,6 +28,8 @@ function HomePage() {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(20);
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchTimeout, setSearchTimeout] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   // Filter and sort products based on active filters and sorting option
   const filteredProducts = sortProducts(
@@ -332,13 +334,24 @@ function HomePage() {
         <div className="right-pane">
         <div class="search-wrapper">
         <div className="search-container">
-                <input
-                    type="text"
-                    placeholder="&#128269;"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="search-input"
-                />
+        <input
+            type="text"
+            placeholder="&#128269;"
+            value={inputValue}
+            onChange={(e) => {
+              const newInputValue = e.target.value;
+              setInputValue(newInputValue);
+              if (searchTimeout) {
+                clearTimeout(searchTimeout);
+              }
+              setSearchTimeout(
+                setTimeout(() => {
+                  setSearchQuery(newInputValue);
+                }, 1000)
+              );
+            }}
+            className="search-input"
+          />
             </div>
             </div>
           <div className="cards-container">
