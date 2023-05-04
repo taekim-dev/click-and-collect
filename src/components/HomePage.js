@@ -39,35 +39,50 @@ function HomePage() {
     .filter((product) => product.title.toLowerCase().includes(searchQuery.toLowerCase()))
   );  
 
-  // Get unique categories from products list
-  const getUniqueCategories = useCallback((products) => {
-    const categoriesSet = new Set(products.map((product) => formatCategory(product.category)));
-    const sortedCategories = Array.from(categoriesSet).sort((a, b) => a.localeCompare(b));
-    return sortedCategories;
-  }, []);
-
-    // Set products and categories based on data from S3 bucket
-    useEffect(() => {
-
-    //const data = mapDummyJSONToProducts(dummyData.products);
-    //const data = mapSampleJSONToProducts(sampleData.products);
-
-    const fetchProducts = async () => {
+    // Fetch products based on active filters
+    const fetchProducts = useCallback(async () => {
+      let endpoint = 'https://taekimdev.pythonanywhere.com/api/products/';
+  
+      if (inStockFilter) {
+        endpoint += 'in-stock/';
+      } else if (discountFilter) {
+        endpoint += 'discounted/';
+      } else {
+        endpoint += 'all/';
+      }
+  
       try {
-        const response = await axios.get('https://taekimdev.pythonanywhere.com/api/products/all/');
+        const response = await axios.get(endpoint);
         const data = response.data;
   
         const mappedData = mapJSONToProducts(data.products);
         setProducts(mappedData);
-        setCategories(getUniqueCategories(mappedData));
       } catch (error) {
         console.error('There was a problem with the request:', error);
       }
-    };
+    }, [inStockFilter, discountFilter]);
   
-    fetchProducts();
-  }, [getUniqueCategories]);
+    // Fetch categories from the categories API
+    const fetchCategories = useCallback(async () => {
+      const endpoint = 'https://taekimdev.pythonanywhere.com/api/products/categories/';
   
+      try {
+        const response = await axios.get(endpoint);
+        const data = response.data;
+  
+        // Sort the categories alphabetically
+        data.categories.sort((a, b) => a.localeCompare(b));
+        setCategories(data.categories);
+      } catch (error) {
+        console.error('There was a problem with the request:', error);
+      }
+    }, []);
+  
+    // Fetch products and categories when filters change or the component mounts
+    useEffect(() => {
+      fetchProducts();
+      fetchCategories();
+    }, [fetchProducts, fetchCategories]);
 
   // Load filter state from local storage
   useEffect(() => {
