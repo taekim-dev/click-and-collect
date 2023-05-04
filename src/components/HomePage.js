@@ -7,6 +7,9 @@ import coinIcon from '../assets/images/coin-icon.png';
 import axios from 'axios';
 
 const ITEMS_PER_PAGE = 9;
+//const PRODUCTS_API = process.env.REACT_APP_PRODUCTS_API;
+//const CATEGORIES_API = process.env.REACT_APP_CATEGORIES_API;
+
 
 function HomePage() {
   // Destructure context values and hooks
@@ -251,6 +254,16 @@ function HomePage() {
               </option>
             ))}
           </select>
+          <h2 className="sorting-title">Sorted By</h2>
+          <select
+              className="sorting-dropdown"
+              value={activeButton}
+              onChange={(e) => handleButtonClick(e.target.value)}
+            >
+              <option value="top-rated">Top Rated</option>
+              <option value="lowest">Lowest Price</option>
+              <option value="highest">Highest Price</option>
+          </select>
           <h2 className="rating-title">Ratings</h2>
           <input
                 type="range"
@@ -312,9 +325,13 @@ function HomePage() {
             In Stock
             </label>
           </div>
+          <div className="sorting-container">
+
+          </div>
         </div>
         <div className="right-pane">
-            <div className="search-container">
+        <div class="search-wrapper">
+        <div className="search-container">
                 <input
                     type="text"
                     placeholder="&#128269;"
@@ -323,27 +340,7 @@ function HomePage() {
                     className="search-input"
                 />
             </div>
-          <div className="sorting-container">
-            <span className="sorted-by-text">Sorted by</span>
-            <button
-                className={`sort-button top-rated${activeButton === 'top-rated' ? ' active' : ''}`}
-                onClick={() => handleButtonClick('top-rated')}
-                >
-                Top Rated
-                </button>
-                <button
-                className={`sort-button lowest${activeButton === 'lowest' ? ' active' : ''}`}
-                onClick={() => handleButtonClick('lowest')}
-                >
-                Lowest Price
-                </button>
-                <button
-                className={`sort-button highest${activeButton === 'highest' ? ' active' : ''}`}
-                onClick={() => handleButtonClick('highest')}
-                >
-                Highest Price
-                </button>
-          </div>
+            </div>
           <div className="cards-container">
           {filteredProducts
             .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
