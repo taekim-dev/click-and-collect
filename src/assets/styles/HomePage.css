@@ -436,11 +436,11 @@
   }
   
   .home-page .collect-button:hover {
-    background-color: rgb(255, 234, 0);
+    background-color: rgb(255, 255, 255);
   }
   
   .home-page .collect-button:active {
-    background-color: rgba(255, 178, 13, 0.929);
+    background-color: rgb(61, 185, 237);
     box-shadow: none;
   }
 
