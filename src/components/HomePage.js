@@ -7,8 +7,8 @@ import coinIcon from '../assets/images/coin-icon.png';
 import axios from 'axios';
 
 const ITEMS_PER_PAGE = 9;
-//const PRODUCTS_API = process.env.REACT_APP_PRODUCTS_API;
-//const CATEGORIES_API = process.env.REACT_APP_CATEGORIES_API;
+const PRODUCTS_API = process.env.REACT_APP_PRODUCTS_API;
+const CATEGORIES_API = process.env.REACT_APP_CATEGORIES_API;
 
 
 function HomePage() {
@@ -46,8 +46,9 @@ function HomePage() {
 
     // Fetch products based on active filters
     const fetchProducts = useCallback(async () => {
-      let endpoint = 'https://taekimdev.pythonanywhere.com/api/products/';
-  
+      //let endpoint = 'https://taekimdev.pythonanywhere.com/api/products/';
+      let endpoint = PRODUCTS_API;
+
       if (inStockFilter) {
         endpoint += 'in-stock/';
       } else if (discountFilter) {
@@ -69,8 +70,8 @@ function HomePage() {
   
     // Fetch categories from the categories API
     const fetchCategories = useCallback(async () => {
-      const endpoint = 'https://taekimdev.pythonanywhere.com/api/products/categories/';
-  
+      //const endpoint = 'https://taekimdev.pythonanywhere.com/api/products/categories/';
+      const endpoint = CATEGORIES_API;
       try {
         const response = await axios.get(endpoint);
         const data = response.data;

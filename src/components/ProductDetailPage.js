@@ -7,7 +7,7 @@ import Breadcrumbs from './Breadcrumbs';
 import axios from 'axios';
 import mapJSONToSingleProduct from '../mappers/mapJSONToSingleProduct';
 
-//const PRODUCTS_API = process.env.REACT_APP_PRODUCTS_API;
+const PRODUCTS_API = process.env.REACT_APP_PRODUCTS_API;
 
 function ProductDetailPage() {
   // Destructure the required values from AppContext
@@ -18,10 +18,8 @@ function ProductDetailPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          `https://taekimdev.pythonanywhere.com/api/products/${id}/`
-        );
-        //const response = await axios.get(`${PRODUCTS_API}${id}/`);
+        //const response = await axios.get(`https://taekimdev.pythonanywhere.com/api/products/${id}/`);
+        const response = await axios.get(`${PRODUCTS_API}${id}/`);
         const data = response.data;
         const mappedData = mapJSONToSingleProduct(data); 
         setProduct(mappedData);
