@@ -6,6 +6,8 @@ Live Demo: [Click and Collect](https://click-and-collect2.netlify.app/)
 
 ![Click and Collect Screenshot](./screenshot.png)
 
+Design: [UI design document](https://docs.google.com/document/d/15QnEV2ltNrihVLnw0BZcTojHMTiw-c-2lqL-opQrZA8/edit?usp=sharing)
+
 ## Features
 
 - Virtual coin system for purchasing items
