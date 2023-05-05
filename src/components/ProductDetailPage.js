@@ -18,7 +18,6 @@ function ProductDetailPage() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        //const response = await axios.get(`https://taekimdev.pythonanywhere.com/api/products/${id}/`);
         const response = await axios.get(`${PRODUCTS_API}${id}/`);
         const data = response.data;
         const mappedData = mapJSONToSingleProduct(data); 
@@ -30,8 +29,6 @@ function ProductDetailPage() {
   
     fetchProduct();
   }, [id]);
-  
-  
 
 // Function to handle the collect button click
 function handleCollectButtonClick(e, product) {

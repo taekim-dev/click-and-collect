@@ -46,7 +46,6 @@ function HomePage() {
 
     // Fetch products based on active filters
     const fetchProducts = useCallback(async () => {
-      //let endpoint = 'https://taekimdev.pythonanywhere.com/api/products/';
       let endpoint = PRODUCTS_API;
 
       if (inStockFilter) {
@@ -70,7 +69,6 @@ function HomePage() {
   
     // Fetch categories from the categories API
     const fetchCategories = useCallback(async () => {
-      //const endpoint = 'https://taekimdev.pythonanywhere.com/api/products/categories/';
       const endpoint = CATEGORIES_API;
       try {
         const response = await axios.get(endpoint);
