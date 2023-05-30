@@ -4,7 +4,7 @@ Click and Collect is an e-commerce web application built with React that demonst
 
 Live Demo: [Click and Collect](https://click-and-collect2.netlify.app/)
 
-![Click and Collect Screenshot](./screenshot.png)
+![Click and Collect Screenshot](./src/assets/images/screenshot.jpg)
 
 Design: [UI design document](https://docs.google.com/document/d/15QnEV2ltNrihVLnw0BZcTojHMTiw-c-2lqL-opQrZA8/edit?usp=sharing)
 
