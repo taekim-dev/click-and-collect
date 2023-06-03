@@ -460,13 +460,15 @@
   }
   
   .home-page .cards-container .loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -160px; 
 }
 
 .home-page .cards-container.loading {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
