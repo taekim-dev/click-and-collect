@@ -5,6 +5,7 @@ import '../assets/styles/HomePage.css';
 import mapJSONToProducts from '../mappers/mapJSONToProducts';
 import coinIcon from '../assets/images/coin-icon.png';
 import axios from 'axios';
+import ReactLoading from 'react-loading';
 
 const ITEMS_PER_PAGE = 9;
 const PRODUCTS_API = process.env.REACT_APP_PRODUCTS_API;
@@ -30,6 +31,7 @@ function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchTimeout, setSearchTimeout] = useState('');
   const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   // Filter and sort products based on active filters and sorting option
   const filteredProducts = sortProducts(
@@ -46,6 +48,9 @@ function HomePage() {
 
     // Fetch products based on active filters
     const fetchProducts = useCallback(async () => {
+
+      setIsLoading(true);
+
       let endpoint = PRODUCTS_API;
 
       if (inStockFilter) {
@@ -62,6 +67,8 @@ function HomePage() {
   
         const mappedData = mapJSONToProducts(data.products);
         setProducts(mappedData);
+        setIsLoading(false);
+
       } catch (error) {
         console.error('There was a problem with the request:', error);
       }
@@ -353,36 +360,46 @@ function HomePage() {
           />
             </div>
             </div>
-          <div className="cards-container">
-          {filteredProducts
-            .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
-            .map((product, index) => (
-                <div
-                key={index}
-                className="card"
-                onClick={() => handleCardClick(product)}
-                >
-                <img src={product.image} alt={product.title} className="product-image" />
-                <div className="product-rating">★{product.rating}</div>
-                <div className="product-price">
-                    <img src={coinIcon} alt="Coin" className="price-coin-icon" />
-                    {product.price}
-                </div>
-                {product.instock ? (
-                    <button
-                    className="collect-button"
-                    onClick={(e) => handleCollectButtonClick(e, product)}
-                    >
-                    COLLECT
-                    </button>
-                ) : (
-                    <div className="out-of-stock">Out of stock</div>
-                )}
-                <div className="product-title">{product.title}</div>
-                </div>
-            ))}
-            </div>
-            <div className="pagination">
+
+
+    <div className={`cards-container ${isLoading ? "loading" : ""}`}>
+    {isLoading ? (
+         <div className="loading-container">
+          <ReactLoading type={"bars"} color={"#000"} />
+        </div>
+          ) : (
+              filteredProducts
+                  .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
+                  .map((product, index) => (
+                      <div
+                          key={index}
+                          className="card"
+                          onClick={() => handleCardClick(product)}
+                      >
+                          <img src={product.image} alt={product.title} className="product-image" />
+                          <div className="product-rating">★{product.rating}</div>
+                          <div className="product-price">
+                              <img src={coinIcon} alt="Coin" className="price-coin-icon" />
+                              {product.price}
+                          </div>
+                          {product.instock ? (
+                              <button
+                                  className="collect-button"
+                                  onClick={(e) => handleCollectButtonClick(e, product)}
+                              >
+                                  COLLECT
+                              </button>
+                          ) : (
+                              <div className="out-of-stock">Out of stock</div>
+                          )}
+                          <div className="product-title">{product.title}</div>
+                      </div>
+                  ))
+              )}
+          </div>
+
+        {!isLoading && (
+        <div className="pagination">
         <button
             className="pagination-arrow"
             onClick={() => setCurrentPage(1)}
@@ -407,6 +424,7 @@ function HomePage() {
             &gt;
         </button>
         </div>
+        )}
         </div>
       </div>
     </div>

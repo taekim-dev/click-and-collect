@@ -459,3 +459,19 @@
     padding: 5px;
   }
   
+  .home-page .cards-container .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.home-page .cards-container.loading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1.5rem;
+  min-height: 100vh;
+}

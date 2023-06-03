@@ -27,6 +27,7 @@ Design: [UI design document](https://docs.google.com/document/d/15QnEV2ltNrihVLn
 - react-countup
 - react-confetti
 - react-skeleton
+- react-loading
 
 ## Backend
 
